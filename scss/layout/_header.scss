@@ -1,0 +1,250 @@
+// Header
+.shpck-header {
+    background-color: $clr-gray-33;
+    color: $clr-gray-bd;
+
+    //Top header START
+    .header-top {
+        border-bottom: 1px solid $clr-br;
+        font-size: 12px;
+
+        .top-list {
+            display: flex;
+
+            .list-item {
+                display: flex;
+                align-items: center;
+                padding: 18px 20px;
+                border-left: 1px solid $clr-br;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                span {
+                    width: max-content;
+                }
+
+                &:last-child {
+                    border-right: 1px solid $clr-br;
+                }
+            }
+        }
+
+        //left side
+        .top-left {
+            float: left;
+
+            .list-item {
+                .fa {
+                    &::before {
+                        font-size: 10px;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+
+        //right side
+        .top-right {
+            float: right;
+
+            .list-item {
+                padding: 12px 20px;
+            }
+
+            .account {
+                position: relative;
+                width: max-content;
+
+                .icon {
+                    margin-left: 10px;
+                }
+
+                .downlist {
+                    min-width: 150px;
+                    margin: 0;
+                    padding: 8px 20px;
+                    position: absolute;
+                    z-index: 2;
+                    left: 0;
+                    top: 100%;
+                    transform: scaleY(0);
+                    transform-origin: center top 0;
+                    transition: all 500ms ease;
+                    background: #fff none repeat scroll 0 0;
+                    text-transform: capitalize;
+
+                    .down-item {
+                        font-size: 12px;
+                        line-height: 21px;
+                        color: $clr-gray-5f;
+                        cursor: pointer;
+
+                        &:hover a {
+                            transition: all 500ms;
+                            color: $clr-red-f6;
+                        }
+                    }
+                }
+
+                &:hover>a {
+                    color: $clr-red-f6;
+                }
+
+                &:hover .downlist {
+                    transform: scaleY(1);
+                }
+            }
+
+            .header-search {
+
+                input,
+                button {
+                    border: 0;
+                    outline: none;
+                    height: 26px;
+                    background: transparent;
+                }
+
+                input {
+                    color: #fff;
+                    font-size: inherit;
+                    font-family: inherit;
+                    width: 160px;
+
+                    &::placeholder {
+                        font-size: 14px;
+                    }
+
+                    &:focus {
+                        width: 150px;
+
+                        &::placeholder {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 6px;
+
+                    i {
+                        margin: 0;
+                        font-size: 13px;
+                        color: $clr-gray-ca;
+                    }
+                }
+            }
+        }
+    }
+
+    //Top header END
+    .header-main {
+        padding: 14px 0 13px;
+        /*logo Start*/
+
+        .logo {
+            img {
+                // width: 100%;
+            }
+        }
+
+        /*logo End*/
+        /*navbar Start*/
+        .shpck-nav {
+            display: flex;
+            justify-content: end;
+
+            .nav-list {
+                display: flex;
+
+                >.list-item {
+                    padding-inline: 15px;
+                    position: relative;
+
+                    >.items-a {
+                        display: block;
+                        padding-block: 22px;
+                        line-height: 26px;
+                        font-size: 14px;
+                        color: $clr-white;
+                    }
+
+                    >&:not(:first-child) {
+                        margin-left: 1px;
+                        ::before {
+                            content: "";
+                            position: absolute;
+                            border-right: 1px solid $clr-white;
+                            height: 10px;
+                            top: 31px;
+                            left: -1px;
+                        }
+                    }
+
+                    .nav-downbar {
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        background-color: $clr-white;
+                        padding: 30px;
+
+                        .down-list{
+                            .list-item{
+                                line-height: 40px;
+                                a{
+                                    display: block;
+                                    min-width: max-content;
+                                }
+                            }
+                            .downbar-title{
+                            
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        /*navbar End*/
+
+        /*total-cart Start*/
+        .total-cart {
+            float: right;
+
+            .total-cart-main {
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                color: $clr-white;
+                font-size: 14px;
+                padding-bottom: 10px;
+                text-align: center;
+
+                .total-cart-number {
+                    padding-bottom: 4px;
+                    border-bottom: 1px solid $clr-white;
+                }
+
+                .total-cart-bag {
+                    margin-top: 8px;
+
+                    .fa-bag-shopping {
+                        font-size: 25px;
+                        line-height: 26px;
+                        color: $clr-red-f6;
+                    }
+                }
+            }
+        }
+
+        /*total-cart End*/
+
+    }
+}

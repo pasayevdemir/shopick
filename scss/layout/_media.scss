@@ -1,0 +1,79 @@
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 992px) {
+    .header-top {
+
+        .top-list {
+            .list-item {
+                padding: 18px 8px !important;
+                i{
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .top-right {
+            .list-item {
+                padding: 12px 8px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .shpck-header {
+        .header-top {
+            display: none;
+        }
+
+        .header-main {
+            .logo {
+                padding-block: 10px;
+                text-align: center;
+            }
+
+            .total-cart {
+                .total-cart-main {
+                    .total-cart-number {
+                        border-bottom: 1px solid $clr-br;
+                        padding-bottom: 8px;
+                        padding-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        width: 300px;
+    }
+}
+
+@media (max-width: 576px) {}
+
+@media (min-width: 576px) {
+
+
+    
+}
+
+
+
+
+//Site custom media
+
+@media (min-width: 1200px) {
+    .container{
+        --bs-gutter-x: 7.5000px;
+        max-width: 1200px;
+    }
+}
+
+@media  (min-width: 480px) and (max-width: 767px){
+    .container,
+    .container-sm {
+        width: 450px;
+    }
+}
+

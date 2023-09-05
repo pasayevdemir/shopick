@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: aqua;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shpck-header {
+  background-color: #333333;
+  color: #bdbdbd;
+}
+.shpck-header .header-top {
+  border-bottom: 1px solid #666;
+  font-size: 12px;
+}
+.shpck-header .header-top .top-list {
+  display: flex;
+}
+.shpck-header .header-top .top-list .list-item {
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  border-left: 1px solid #666;
+}
+.shpck-header .header-top .top-list .list-item i {
+  margin-right: 10px;
+}
+.shpck-header .header-top .top-list .list-item span {
+  width: -moz-max-content;
+  width: max-content;
+}
+.shpck-header .header-top .top-list .list-item:last-child {
+  border-right: 1px solid #666;
+}
+.shpck-header .header-top .top-left {
+  float: left;
+}
+.shpck-header .header-top .top-left .list-item .fa::before {
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+}
+.shpck-header .header-top .top-right {
+  float: right;
+}
+.shpck-header .header-top .top-right .list-item {
+  padding: 12px 20px;
+}
+.shpck-header .header-top .top-right .account {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+.shpck-header .header-top .top-right .account .icon {
+  margin-left: 10px;
+}
+.shpck-header .header-top .top-right .account .downlist {
+  min-width: 150px;
+  margin: 0;
+  padding: 8px 20px;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 100%;
+  transform: scaleY(0);
+  transform-origin: center top 0;
+  transition: all 500ms ease;
+  background: #fff none repeat scroll 0 0;
+  text-transform: capitalize;
+}
+.shpck-header .header-top .top-right .account .downlist .down-item {
+  font-size: 12px;
+  line-height: 21px;
+  color: #5f5f5f;
+  cursor: pointer;
+}
+.shpck-header .header-top .top-right .account .downlist .down-item:hover a {
+  transition: all 500ms;
+  color: #f6416c;
+}
+.shpck-header .header-top .top-right .account:hover > a {
+  color: #f6416c;
+}
+.shpck-header .header-top .top-right .account:hover .downlist {
+  transform: scaleY(1);
+}
+.shpck-header .header-top .top-right .header-search input,
+.shpck-header .header-top .top-right .header-search button {
+  border: 0;
+  outline: none;
+  height: 26px;
+  background: transparent;
+}
+.shpck-header .header-top .top-right .header-search input {
+  color: #fff;
+  font-size: inherit;
+  font-family: inherit;
+  width: 160px;
+}
+.shpck-header .header-top .top-right .header-search input::-moz-placeholder {
+  font-size: 14px;
+}
+.shpck-header .header-top .top-right .header-search input::placeholder {
+  font-size: 14px;
+}
+.shpck-header .header-top .top-right .header-search input:focus {
+  width: 150px;
+}
+.shpck-header .header-top .top-right .header-search input:focus::-moz-placeholder {
+  font-size: 12px;
+}
+.shpck-header .header-top .top-right .header-search input:focus::placeholder {
+  font-size: 12px;
+}
+.shpck-header .header-top .top-right .header-search button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+}
+.shpck-header .header-top .top-right .header-search button i {
+  margin: 0;
+  font-size: 13px;
+  color: #cacaca;
+}
+.shpck-header .header-main {
+  padding: 14px 0 13px;
+  /*logo Start*/
+  /*logo End*/
+  /*navbar Start*/
+  /*navbar End*/
+  /*total-cart Start*/
+  /*total-cart End*/
+}
+.shpck-header .header-main .shpck-nav {
+  display: flex;
+  justify-content: end;
+}
+.shpck-header .header-main .shpck-nav .nav-list {
+  display: flex;
+}
+.shpck-header .header-main .shpck-nav .nav-list > .list-item {
+  padding-inline: 15px;
+  position: relative;
+}
+.shpck-header .header-main .shpck-nav .nav-list > .list-item > .items-a {
+  display: block;
+  padding-block: 22px;
+  line-height: 26px;
+  font-size: 14px;
+  color: #fff;
+}
+> .shpck-header .header-main .shpck-nav .nav-list > .list-item:not(:first-child) {
+  margin-left: 1px;
+}
+> .shpck-header .header-main .shpck-nav .nav-list > .list-item:not(:first-child) ::before {
+  content: "";
+  position: absolute;
+  border-right: 1px solid #fff;
+  height: 10px;
+  top: 31px;
+  left: -1px;
+}
+.shpck-header .header-main .shpck-nav .nav-list > .list-item .nav-downbar {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  padding: 30px;
+}
+.shpck-header .header-main .shpck-nav .nav-list > .list-item .nav-downbar .down-list .list-item {
+  line-height: 40px;
+}
+.shpck-header .header-main .shpck-nav .nav-list > .list-item .nav-downbar .down-list .list-item a {
+  display: block;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.shpck-header .header-main .total-cart {
+  float: right;
+}
+.shpck-header .header-main .total-cart .total-cart-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.shpck-header .header-main .total-cart .total-cart-main .total-cart-number {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #fff;
+}
+.shpck-header .header-main .total-cart .total-cart-main .total-cart-bag {
+  margin-top: 8px;
+}
+.shpck-header .header-main .total-cart .total-cart-main .total-cart-bag .fa-bag-shopping {
+  font-size: 25px;
+  line-height: 26px;
+  color: #f6416c;
+}
+
+@media (max-width: 992px) {
+  .header-top .top-list .list-item {
+    padding: 18px 8px !important;
+  }
+  .header-top .top-list .list-item i {
+    margin-right: 8px;
+  }
+  .header-top .top-right .list-item {
+    padding: 12px 8px !important;
+  }
+}
+@media (max-width: 768px) {
+  .shpck-header .header-top {
+    display: none;
+  }
+  .shpck-header .header-main .logo {
+    padding-block: 10px;
+    text-align: center;
+  }
+  .shpck-header .header-main .total-cart .total-cart-main .total-cart-number {
+    border-bottom: 1px solid #666;
+    padding-bottom: 8px;
+    padding-top: 5px;
+  }
+  .container {
+    width: 300px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    --bs-gutter-x: 7.5000px;
+    max-width: 1200px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .container,
+  .container-sm {
+    width: 450px;
+  }
+}/*# sourceMappingURL=main.css.map */
