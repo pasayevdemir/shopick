@@ -1,0 +1,68 @@
+#header-text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #666;
+}
+
+.pageFont{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #666;
+}
+
+.pagePanel{
+    background-color: #dedede;
+    border-top: 3px solid #f6416c;
+    color: #555;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 15px;
+    padding: 1em 2em 1em 3.5em;
+    position: relative;
+    width: auto;
+}
+
+.pagePanel a{
+    color: #003399;
+    font-weight: 0;
+}
+
+.pagePanel a:hover{
+    color: #f6416c;
+}
+
+.required{
+    color: #f6416c;
+}
+
+.col-lg-6 p input{
+    background: #f0f0f0 none repeat scroll 0 0;
+    border: 1px solid #e5e5e5;
+    height: 40px;
+    margin: 0 0 14px;
+    max-width: 100%;
+    padding: 0 0 0 10px;
+    width: 100%;
+}
+
+#bLogin{
+    background: #252525 none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    display: inline-block;
+    /* float: left; */
+    font-size: inherit;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+#bLogin:hover{
+    background: #f6416c none repeat scroll 0 0;
+}

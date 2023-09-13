@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: aqua;
+  background-color: #fff;
 }
 
 ul {
@@ -256,4 +256,182 @@ a {
   .container-sm {
     width: 450px;
   }
+}
+.page-banner-area {
+  position: relative;
+  background-color: #666;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(./images/1.jpg);
+  background-position: center center;
+  margin-bottom: 60px;
+}
+.page-banner-area .page-banner-area-container {
+  height: 370px;
+  max-width: 1200px;
+}
+.page-banner-area .page-banner-area-container .page-banner-area-text {
+  position: absolute;
+}
+.page-banner-area .page-banner-area-container .page-banner-area-text h1 {
+  font-size: 3rem;
+}
+
+.page-map-area .page-map-area-container {
+  width: 80%;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .margin-bottom-2-5 {
+  margin-bottom: 2.5rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-info {
+  border: 1px solid #dedede;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-info .brand-header {
+  border-bottom: 1px solid #dedede;
+  padding: 0.7rem 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-info .brand-content {
+  padding: 1.2rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-info .brand-content .margin-bottom-0-5 {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-info .brand-content .text-gray {
+  color: #999999;
+  margin-left: 0.3rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .top-rated-info {
+  border: 1px solid #dedede;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .top-rated-info .brand-header {
+  border-bottom: 1px solid #dedede;
+  padding: 0.7rem 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .top-rated-info .brand-content {
+  padding: 1.2rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .top-rated-info .brand-content .margin-bottom-0-5 {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .top-rated-info .brand-content .text-gray {
+  color: #999999;
+  margin-left: 0.3rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-discount-info .brand-header {
+  padding: 0.7rem 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-discount-info .brand-content {
+  padding: 1.2rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-discount-info .brand-content .margin-bottom-0-5 {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.page-map-area .page-map-area-container .page-map-area-brand-info .brand-discount-info .brand-content .text-gray {
+  color: #999999;
+  margin-left: 0.3rem;
+}
+.page-map-area .page-map-area-container .page-map-area-map-info .map-area-container .map-contact-info-container {
+  color: #716c6c;
+}
+.page-map-area .page-map-area-container .page-map-area-map-info .map-area-container .map-contact-info-container .contact-bold-line {
+  border: 1px solid #e8e8e9;
+}
+
+.they-are-with-us-area {
+  background-color: #f8f8f8;
+}
+.they-are-with-us-area .they-are-with-us-container {
+  width: 80%;
+}
+.they-are-with-us-area .they-are-with-us-container .they-are-with-us-text-area .right-line {
+  display: inline-block;
+  width: 20px;
+  height: 62px;
+  border: 2px solid #000;
+  border-right: 0;
+}
+.they-are-with-us-area .they-are-with-us-container .they-are-with-us-text-area .left-line {
+  width: 20px;
+  height: 62px;
+  border: 2px solid #000;
+  border-left: 0;
+  display: inline-block;
+}
+.they-are-with-us-area .they-are-with-us-container .they-are-with-us-logos-area .logo-images-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.they-are-with-us-area .they-are-with-us-container .they-are-with-us-logos-area .logo-images-container .single-logo {
+  padding: 4rem 3rem;
+}
+.they-are-with-us-area .they-are-with-us-container .they-are-with-us-logos-area .logo-images-container .bb {
+  border-bottom: 2px solid #fff;
+}
+.they-are-with-us-area .they-are-with-us-container .they-are-with-us-logos-area .logo-images-container .bl {
+  border-left: 2px solid #fff;
+}
+.they-are-with-us-area .they-are-with-us-container .they-are-with-us-logos-area .logo-images-container .bt {
+  border-top: 2px solid #fff;
+}
+.they-are-with-us-area .they-are-with-us-container .they-are-with-us-logos-area .logo-images-container .br {
+  border-right: 2px solid #fff;
+}
+
+.footer-container {
+  background-color: #666;
+  margin-top: 5rem;
+}
+.footer-container .footer-content {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./images/footer-bg.jpg);
+  background-position: center center;
+}
+.footer-container .footer-content .footer-content-container {
+  margin: 0 auto;
+  width: 80%;
+}
+.footer-container .footer-content .footer-content-container .footer-content-text {
+  color: #fff;
+  font-size: 0.8rem;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: start;
+}
+.footer-container .footer-content .footer-content-container .footer-content-text .footer-white-line {
+  width: 35px;
+  height: 0;
+  border: 1.7px solid #fff;
+  border-radius: 5px;
+}
+.footer-container .footer-content .footer-content-container .footer-content-text .icon {
+  font-size: 1rem;
+}
+.footer-container .footer-content .footer-copyright .footer-copyright-container .copyright-text .copyright {
+  color: #f5f5f4;
+}
+.footer-container .footer-content .footer-copyright .footer-copyright-container .copyright-text .copyright .codecarnival {
+  color: #f6416c;
+}
+
+.single-page-banner-area {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(./images/1.jpg);
+  background-position: left center;
+  margin-bottom: 60px;
+}
+.single-page-banner-area .single-page-banner-area-container {
+  height: 370px;
+  background-position: center center;
+  max-width: 1200px;
+}
+.single-page-banner-area .single-page-banner-area-container .single-page-banner-area-text {
+  position: absolute;
+}
+.single-page-banner-area .single-page-banner-area-container .single-page-banner-area-text h1 {
+  font-size: 3rem;
 }/*# sourceMappingURL=main.css.map */
