@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500.00,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -177,7 +182,7 @@
           <h3 id="header-text">CHECKOUT</h3>
         </div>
         <div class="col-12">
-          <h4 class="pageFont pagePanel">
+          <h4 class="pageFont pagePanel mt-4" id="panel">
             Returning customer? <a href=""><span>Click here to login</span></a>
           </h4>
           <p class="pageFont">
@@ -186,51 +191,342 @@
             & Shipping section.
           </p>
         </div>
-        <div class="row d-flex">
-            <div class="col-lg-6">
-                <p>
-                    <label class="pageFont">Username or email</label>
-                    <span class="pageFont required">*</span><br>
-                    <input type="text">
-                </p>
-            </div>
-            <div class="col-lg-6">
-                <p>
-                    <label class="pageFont">Password</label>
-                    <span class="pageFont required">*</span><br>
-                    <input type="password">
-                </p>
-            </div>
+        <div class="row d-flex mt-5">
+          <div class="col-lg-6">
+            <p>
+              <label class="pageFont">Username or email</label>
+              <span class="pageFont required">*</span><br />
+              <input type="text" />
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+              <label class="pageFont">Password</label>
+              <span class="pageFont required">*</span><br />
+              <input type="password" />
+            </p>
+          </div>
         </div>
         <p>
-            <input type="submit" id="bLogin" value="LOGIN">
-            <input type="radio">
-            <label class="pageFont" for="for">Remember me</label>
+          <input type="submit" id="bLogin" value="LOGIN" />
+          <input type="radio" />
+          <label class="pageFont" for="for">Remember me</label>
         </p>
-        <a href=""><p class="pageFont" style="color: #f6416c;">Lost your password?</p></a>
+        <a href="">
+          <p class="pageFont" style="color: #f6416c">Lost your password?</p></a
+        >
         <h4 class="pageFont pagePanel mt-5">
-            ::before
-            Have a coupon? Click here to enter your code
-          </h4>
+          Have a coupon? <a href=""><span>Click here to enter your code</span></a>
+        </h4>
 
+        <div class="row d-flex mt-3">
+          <!-- Left Panel -->
+          <div class="col-lg-6">
+            <h3 style="font-size: 20px">Billing Details</h3>
+            <div class="text-data mt-4">
+              <!-- Username & Password -->
+              <div class="row customer-info">
+                <div class="col-lg-6 mt-3">
+                  <p>
+                    <label class="pageFont">Username or email</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+                <div class="col-lg-6 mt-3">
+                  <p>
+                    <label class="pageFont">Password </label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="password" />
+                  </p>
+                </div>
+              </div>
+              <!-- Company Name -->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Company Name</label>
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+              </div>
+              <!-- Email Address & Phone -->
+              <div class="row customer-info">
+                <div class="col-lg-6">
+                  <p>
+                    <label class="pageFont">Email Address</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <p>
+                    <label class="pageFont">Phone</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+              </div>
+              <!-- Country -->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Country</label>
+                    <input
+                      id="inpText"
+                      type="text"
+                      placeholder="United States (US)"
+                    />
+                  </p>
+                </div>
+              </div>
+              <!-- Address -->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Address</label>
+                    <input
+                      id="inpText"
+                      type="text"
+                      placeholder="Street address"
+                    />
+                    <input
+                      id="inpText"
+                      type="text"
+                      placeholder="Site,Unite etc (optional)"
+                    />
+                  </p>
+                </div>
+              </div>
+              <!-- Town & City-->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Town / City</label>
+                    <input
+                      id="inpText"
+                      type="text"
+                      placeholder="United States (US)"
+                    />
+                  </p>
+                </div>
+              </div>
+              <!-- State & Zip -->
+              <div class="row customer-info">
+                <div class="col-lg-6 mt-3">
+                  <p>
+                    <label class="pageFont">State</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+                <div class="col-lg-6 mt-3">
+                  <p>
+                    <label class="pageFont">Zip</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+              </div>
+              <div class="create-account pageFont">
+                <h4>Create Account</h4>
+                <label>
+                  <input type="checkbox" checked />
+                  <span
+                    >Create an account by entering the information below.</span
+                  >
+                </label>
+                <p>
+                  If you are a returning customer please login at the top of the
+                  page.
+                </p>
+              </div>
+              <!-- Account Password -->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Account Password</label>
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+              </div>
+              <h4 class="title-8 header-text">
+                Ship to a different address
+                <input type="checkbox" checked="checked" />
+              </h4>
+              <!-- Username & Password -->
+              <div class="row customer-info">
+                <div class="col-lg-6">
+                  <p>
+                    <label class="pageFont">Username or email</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <p>
+                    <label class="pageFont">Password </label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="password" />
+                  </p>
+                </div>
+              </div>
+              <!-- Company Name -->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Company Name</label>
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+              </div>
+              <!-- Email Address & Phone -->
+              <div class="row customer-info">
+                <div class="col-lg-6">
+                  <p>
+                    <label class="pageFont">Email Address</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <p>
+                    <label class="pageFont">Phone</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+              </div>
+              <!-- Country -->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Country</label>
+                    <input
+                      id="inpText"
+                      type="text"
+                      placeholder="United States (US)"
+                    />
+                  </p>
+                </div>
+              </div>
+              <!-- Address -->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Address</label>
+                    <input
+                      id="inpText"
+                      type="text"
+                      placeholder="Street address"
+                    />
+                    <input
+                      id="inpText"
+                      type="text"
+                      placeholder="Site,Unite etc (optional)"
+                    />
+                  </p>
+                </div>
+              </div>
+              <!-- Town & City-->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Town / City</label>
+                    <input
+                      id="inpText"
+                      type="text"
+                      placeholder="United States (US)"
+                    />
+                  </p>
+                </div>
+              </div>
+              <!-- State & Zip -->
+              <div class="row customer-info">
+                <div class="col-lg-6">
+                  <p>
+                    <label class="pageFont">State</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <p>
+                    <label class="pageFont">Zip</label>
+                    <span class="pageFont required">*</span><br />
+                    <input id="inpText" type="text" />
+                  </p>
+                </div>
+              </div>
+              <!-- Additoional Information -->
+              <div class="row customer-info">
+                <div class="col-lg-12">
+                  <p>
+                    <label class="pageFont">Additoional Information</label>
+                    <textarea name="" id="customer-textarea"></textarea>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+           <!-- Right Panel -->
+          <div class="col-lg-6">
+              <h3 style="font-size: 20px">Your Order</h3>
+              <div class="order-table mt-5">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="order-name">Product</th>
+                      <th class="order-total">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="order-name">Lorem Ipsum comes (1)</td>
+                      <td class="order-total">$499.00</td>
+                    </tr>
+                    <tr>
+                      <td class="order-name">Extremes of Good (3)</td>
+                      <td class="order-total">$559.00</td>
+                    </tr>
+                    <tr>
+                      <td class="order-name">Lorem Ipsum comes (1)</td>
+                      <td class="order-total">$320.00</td>
+                    </tr>
+                    <tr>
+                      <th>Shipping</th>
+                      <td>
+                        <ul>
+                          <li>
+                            <input type="checkbox" />
+                            <label for="">Free Shipping</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" />
+                            <label for="">Flat Rate $120.00</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" />
+                            <label for="">International Delivery</label>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="product-total-name">Order Total</td>
+                      <td class="product-total-sum">$1378.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="payments">
 
+                </div>
+              </div>
+          </div>
 
-
-
+        </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <!-- container -->
 
       <div class="they-are-with-us-area my-5">
         <div class="they-are-with-us-container m-auto row">
