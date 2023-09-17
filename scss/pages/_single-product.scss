@@ -1,0 +1,23 @@
+.single-page-banner-area {
+  position: relative;
+  background: 
+    /* top, transparent red */ linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    /* bottom, image */ url(./images/1.jpg);
+  background-position: left center;
+  margin-bottom: 60px;
+  .single-page-banner-area-container {
+    height: 370px;
+
+    background-position: center center;
+    max-width: 1200px;
+    .single-page-banner-area-text {
+      position: absolute;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}

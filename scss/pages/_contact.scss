@@ -1,0 +1,198 @@
+.page-banner-area {
+  position: relative;
+  background-color: #666;
+  background: 
+  /* top, transparent red */ linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    /* bottom, image */ url(./images/1.jpg);
+  background-position: center center;
+  margin-bottom: 60px;
+  .page-banner-area-container {
+    height: 370px;
+
+    max-width: 1200px;
+    .page-banner-area-text {
+      position: absolute;
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.page-map-area {
+  .page-map-area-container {
+    width: 80%;
+    .page-map-area-brand-info {
+      .margin-bottom-2-5 {
+        margin-bottom: 2.5rem;
+      }
+      .brand-info {
+        border: 1px solid #dedede;
+        .brand-header {
+          border-bottom: 1px solid #dedede;
+          padding: 0.7rem 1rem;
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+        .brand-content {
+          padding: 1.2rem;
+          .margin-bottom-0-5 {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+          }
+          .text-gray {
+            color: #999999;
+            margin-left: 0.3rem;
+          }
+        }
+      }
+      .top-rated-info {
+        border: 1px solid #dedede;
+        .brand-header {
+          border-bottom: 1px solid #dedede;
+          padding: 0.7rem 1rem;
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+        .brand-content {
+          padding: 1.2rem;
+          .margin-bottom-0-5 {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+          }
+          .text-gray {
+            color: #999999;
+            margin-left: 0.3rem;
+          }
+        }
+      }
+      .brand-discount-info {
+        .brand-header {
+          padding: 0.7rem 1rem;
+          font-weight: bold;
+          font-size: 1.3rem;
+        }
+        .brand-content {
+          padding: 1.2rem;
+          .margin-bottom-0-5 {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+          }
+          .text-gray {
+            color: #999999;
+            margin-left: 0.3rem;
+          }
+        }
+      }
+    }
+    .page-map-area-map-info {
+      .map-area-container {
+        .map-content {
+        }
+        .map-contact-info {
+        }
+        .map-contact-info-container {
+          color: #716c6c;
+          .contact-bold-line {
+            border: 1px solid #e8e8e9;
+          }
+        }
+      }
+    }
+  }
+}
+
+.they-are-with-us-area {
+  background-color: #f8f8f8;
+  .they-are-with-us-container {
+    width: 80%;
+    .they-are-with-us-text-area {
+      .right-line {
+        display: inline-block;
+        width: 20px;
+        height: 62px;
+        border: 2px solid #000;
+        border-right: 0;
+      }
+      .left-line {
+        width: 20px;
+        height: 62px;
+        border: 2px solid #000;
+        border-left: 0;
+        display: inline-block;
+      }
+    }
+    .they-are-with-us-logos-area {
+      .logo-images-container {
+        display: flex;
+        flex-wrap: wrap;
+
+        .single-logo {
+          padding: 4rem 3rem;
+        }
+        .bb {
+          border-bottom: 2px solid #fff;
+        }
+        .bl {
+          border-left: 2px solid #fff;
+        }
+        .bt {
+          border-top: 2px solid #fff;
+        }
+        .br {
+          border-right: 2px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+.footer-container {
+  background-color: #666;
+  margin-top: 5rem;
+
+  .footer-content {
+    background: 
+  /* top, transparent red */ linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+      ),
+      /* bottom, image */ url(./images/footer-bg.jpg);
+    background-position: center center;
+    .footer-content-container {
+      margin: 0 auto;
+      width: 80%;
+      .footer-content-text {
+        color: #fff;
+        font-size: 0.8rem;
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+        text-align: start;
+        .footer-white-line {
+          width: 35px;
+          height: 0;
+          border: 1.7px solid #fff;
+          border-radius: 5px;
+        }
+        .icon {
+          font-size: 1rem;
+        }
+      }
+    }
+    .footer-copyright {
+      .footer-copyright-container {
+        .copyright-text {
+          .copyright {
+            color: #f5f5f4;
+            .codecarnival {
+              color: #f6416c;
+            }
+          }
+        }
+      }
+    }
+  }
+}
