@@ -6,9 +6,11 @@
   font-family: "Roboto", sans-serif;
 }
 
+
 body {
   background-color: #fff;
 }
+
 
 ul {
   list-style: none;
@@ -19,6 +21,58 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.sliders {
+  overflow: hidden;
+  width: 100%;
+  --per-view: 5;
+}
+.sliders > .sliders-outter {
+  position: relative;
+  left: 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% - 3px * var(--per-view-1) / var(--per-view));
+  gap: 3px;
+  /* overflow: hidden; */
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+.sliders > .sliders-outter > .slider-item {
+  text-align: center;
+}
+.sliders > .sliders-outter > .slider-item img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn-shop {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  height: 33px;
+  line-height: 31px;
+  border: 1px solid #f6416c;
+  padding-inline: 13px;
+  background: #f6416c;
+  transition: all 0.5s ease;
+}
+.btn-shop:hover {
+  color: #fff;
+  background: none;
+}
+
+.btn-shop-active {
+  color: #333333;
+  background: none;
+}
+.btn-shop-active:hover {
+  color: #fff;
+  background: #f6416c;
 }
 
 .shpck-header {
@@ -178,6 +232,7 @@ a {
   left: -1px;
 }
 .shpck-header .header-main .shpck-nav .nav-list > .list-item .nav-downbar {
+  display: none;
   position: absolute;
   left: 0;
   top: 100%;
@@ -217,6 +272,472 @@ a {
   color: #f6416c;
 }
 
+.item-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-banner .item-photo,
+.item-banner .item-info {
+  display: inline-block;
+}
+.item-banner .item-photo a {
+  position: relative;
+}
+.item-banner .item-photo a::after {
+  transform: scaleX(0);
+}
+.item-banner .item-photo a::before {
+  transform: scaleY(0);
+}
+.item-banner .item-photo a::after, .item-banner .item-photo a::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 36px);
+  height: calc(100% - 36px);
+  top: 18px;
+  left: 18px;
+  transform-origin: center;
+  z-index: 1;
+  background: #000;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.item-banner .item-photo a:hover::after, .item-banner .item-photo a:hover::before {
+  transition: all 0.5s ease;
+  opacity: 0.1;
+  transform: scaleX(1);
+  transform: scaleY(1);
+}
+.item-banner .item-photo img {
+  display: inline-block;
+  width: 100%;
+}
+.item-banner .item-info {
+  padding: 25px 53px 66px;
+  transform: translateX(-15px);
+  border: 1px solid #666;
+}
+.item-banner .item-info h2 {
+  line-height: 32px;
+  font-size: 32px;
+  font-weight: 300;
+  text-wrap: nowrap;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.item-banner .item-info h2 b {
+  font-weight: 700;
+}
+.item-banner .item-info .line-down {
+  font-size: 24px;
+  position: relative;
+}
+.item-banner .item-info .line-down::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 75px;
+  background: #f6416c;
+  z-index: 1;
+}
+.item-banner .item-info .btn-shop-banner {
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 20px;
+}
+
+.item-banner-right {
+  flex-direction: row-reverse;
+}
+.item-banner-right .item-info {
+  transform: translateX(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.item-banner-right .item-info .line-down::after {
+  right: 0px;
+  left: auto;
+}
+
+.shpck-collection .row > * {
+  padding: 0;
+  margin: 0;
+}
+.shpck-collection .section-head {
+  margin-bottom: 30px;
+}
+
+.collection-item {
+  position: relative;
+}
+.collection-item .collection-photo {
+  position: relative;
+}
+.collection-item .collection-photo .veil {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.collection-item .collection-photo img {
+  max-width: 100%;
+}
+.collection-item .collection-info {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.collection-item .collection-info .new {
+  margin-bottom: 42px;
+}
+.collection-item .collection-info ul > li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 25px;
+}
+.collection-item .collection-info ul > li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  margin-bottom: 4px;
+  background: #f6416c;
+}
+.collection-item .collection-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #4A4949;
+}
+.collection-item .collection-info h2 span {
+  font-weight: 300;
+}
+.collection-item .collection-info .btn-collect {
+  margin-top: 30px;
+  opacity: 0;
+}
+.collection-item:hover .collection-photo .veil {
+  opacity: 0.7;
+}
+.collection-item:hover .collection-info .new {
+  opacity: 0;
+}
+.collection-item:hover .collection-info > * {
+  color: #fff;
+}
+.collection-item:hover .collection-info .btn-collect {
+  opacity: 1;
+}
+
+.shpck-product {
+  overflow: hidden;
+}
+.shpck-product > .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.shpck-product > .content > .slider-control .item,
+.shpck-product > .content > .slider-control .content {
+  display: flex;
+  align-items: center;
+}
+.shpck-product > .content > .slider-control > .content {
+  padding-bottom: 16px;
+}
+.shpck-product > .content > .slider-control > .content > .slider-info {
+  margin-top: 20px;
+}
+.shpck-product > .content > .slider-control > .content .item {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shpck-product > .content > .slider-control > .content .item i {
+  font-size: 16px;
+  color: #666;
+}
+.shpck-product > .content > .slider-control > .content > .line i {
+  margin-inline: 10px;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 58px;
+  height: 0.1px;
+  background: #000 none repeat scroll 0 0;
+}
+.shpck-product > .content > .slider-control > .content > .line i::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border: 1px solid red;
+  background-color: white;
+  border-radius: 50%;
+}
+.shpck-product > .content .sliders {
+  min-width: 100% !important;
+}
+
+.cart-info {
+  text-align: center;
+  margin-top: 20px;
+}
+.cart-info > * {
+  line-height: 30px;
+}
+.cart-info .rating {
+  font-size: 13px;
+  color: #717171;
+}
+.cart-info .rating .rating-1 {
+  color: #F74F77;
+}
+.cart-info .info {
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+.cart-info .info:hover {
+  color: #f6416c;
+}
+
+.photo {
+  position: relative;
+}
+.photo img {
+  width: 100%;
+}
+.photo .image {
+  display: inline-block;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+}
+.photo .image .before {
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+.photo .image .after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  opacity: 0;
+  transform-style: preserve-3d;
+}
+.photo .action {
+  width: 100%;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.photo .action .action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1px;
+  border-radius: 25px;
+  gap: 1px;
+}
+.photo .action .action-btn span {
+  font-size: 0px;
+  padding: 0;
+  color: #fff;
+  text-wrap: nowrap;
+}
+.photo .action .action-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  font-size: 14px;
+  color: #2d2d2d;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.photo .action .action-btn:hover {
+  background-color: #f6416c;
+}
+.photo .action .action-btn:hover span {
+  font-size: 14px;
+  padding: 0 13px 0 8px;
+  transition: all 0.3s ease 0s;
+}
+.photo .action .action-btn:hover i {
+  background-color: inherit;
+  box-shadow: 2px 2px 2px 0 #b02e4d;
+  color: #fff;
+}
+.photo:hover .action {
+  z-index: 2;
+}
+.photo:hover .image .after {
+  transform-style: preserve-3d;
+  z-index: 1;
+  opacity: 1;
+}
+.photo:hover .image .opacity-live {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+  z-index: 2;
+  background-color: #000;
+  transition: all 0.5s ease;
+}
+
+.promotional-content .col,
+.promotional-content .row {
+  padding: 0;
+  margin: 0;
+}
+.promotional-content .promotional-photo {
+  position: relative;
+}
+.promotional-content .promotional-photo img {
+  width: 100%;
+  min-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+}
+.promotional-content .promotional-photo .promotional-info {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 32%;
+  padding-top: 10%;
+}
+.promotional-content .promotional-photo .promotional-info > * {
+  color: #fff;
+}
+.promotional-content .promotional-photo .promotional-info h2 {
+  font-size: 71px;
+  font-weight: 400;
+  line-height: 56px;
+  margin-bottom: 20px;
+}
+.promotional-content .promotional-photo .promotional-info h3 {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 36px;
+  margin: 0;
+}
+.promotional-content .promotional-photo .promotional-info h3 span {
+  font-size: 50px;
+}
+.promotional-content .promotional-photo .promotional-info h4 {
+  font-size: 32px;
+  margin: 15px 0 0;
+}
+.promotional-content .promotional-photo .promotional-info .btn-promotional {
+  margin-top: 40px;
+}
+.promotional-content .promotional-photo-clock {
+  position: relative;
+}
+.promotional-content .promotional-photo-clock::before {
+  content: "";
+  display: none;
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #000;
+  opacity: 0;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer {
+  padding: 35px 0 0 45px;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item {
+  padding: 17px 0 0;
+  height: 80px;
+  width: 80px;
+  background: #323232;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item span, .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item p {
+  display: block;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item span {
+  font-size: 24px;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item p {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+@media (min-width: 1400px) {
+  .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer {
+    padding: 75px 0 0 45px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item {
+    height: 105px;
+    width: 105px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item span {
+    line-height: 36px;
+  }
+}
+@media (max-width: 1200px) {
+  .shpck-product .content > .sliders {
+    --per-view: 4;
+  }
+  .shpck-promotional .promotional-photo img {
+    min-height: 420px;
+    height: 420px;
+    -o-object-position: right top;
+       object-position: right top;
+  }
+  .shpck-promotional .promotional-photo .promotional-info {
+    padding-left: 16%;
+  }
+}
 @media (max-width: 992px) {
   .header-top .top-list .list-item {
     padding: 18px 8px !important;
@@ -226,6 +747,12 @@ a {
   }
   .header-top .top-right .list-item {
     padding: 12px 8px !important;
+  }
+  .shpck-product .content > .sliders {
+    --per-view: 3;
+  }
+  .shpck-collection .collection-item .collection-info .new {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -244,11 +771,128 @@ a {
   .container {
     width: 300px;
   }
+  .item-banner .item-info {
+    display: none;
+  }
+  .item-banner:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .shpck-product .content > .sliders {
+    --per-view: 2;
+  }
+  .collection-item .collection-info {
+    right: 50px;
+  }
+  .collection-item .collection-info h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: end;
+  }
+  .collection-item .collection-info ul {
+    display: none;
+  }
+  .collection-item .collection-info .btn-collect {
+    margin-top: 12px;
+    opacity: 1;
+  }
+  .promotional-content .promotional-photo img {
+    min-height: 300px;
+    height: 300px;
+  }
+  .promotional-content .promotional-photo .promotional-info {
+    padding-left: 10px;
+  }
+  .promotional-content .promotional-photo .promotional-info h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .promotional-content .promotional-photo .promotional-info h3 {
+    font-size: 14px;
+  }
+  .promotional-content .promotional-photo .promotional-info h3 span {
+    font-size: 30px;
+  }
+  .promotional-content .promotional-photo .promotional-info h4 {
+    font-size: 14px;
+    margin: 5px 0 0;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer {
+    padding: 15px 0 0 10px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item {
+    height: 60px;
+    width: 60px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item span {
+    line-height: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .shpck-product .content > .sliders {
+    --per-view: 1;
+  }
+}
+@media (min-width: 1170px) and (max-width: 1400px) {
+  .shpck-promotional .promotional-photo img {
+    min-height: 420px;
+    height: 420px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     --bs-gutter-x: 7.5000px;
     max-width: 1200px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .item-banner .item-info {
+    padding: 20px 53px 35px;
+  }
+  .shpck-promotional .promotional-photo .promotional-info {
+    padding-left: 16%;
+  }
+  .shpck-promotional .promotional-photo .promotional-info h2 {
+    font-size: 50px;
+  }
+  .shpck-promotional .promotional-photo .promotional-info h3 {
+    font-size: 22px;
+  }
+  .shpck-promotional .promotional-photo .promotional-info h3 span {
+    font-size: 40px;
+  }
+  .shpck-promotional .promotional-photo .promotional-info h4 {
+    font-size: 22px;
+  }
+  .shpck-promotional .promotional-photo-clock {
+    position: relative;
+  }
+  .shpck-promotional .promotional-photo-clock::before {
+    display: block;
+    opacity: 0.5;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .item-banner .item-info {
+    padding: 10px 35px 20px;
+  }
+  .item-banner .item-info h2 {
+    font-size: 26px;
+    line-height: 26px;
+  }
+  .shpck-best-sel .photo .action .action-btn:hover {
+    gap: 2px;
+  }
+  .shpck-best-sel .photo .action .action-btn:hover span {
+    padding: 0 8px 0 5px !important;
+  }
+  .shpck-best-sel .photo .action .action-btn i {
+    font-size: 15px;
+    height: 35px;
+    line-height: 36px;
+    width: 36px;
+  }
+  .shpck-promotional .row > .col:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {
@@ -257,6 +901,53 @@ a {
     width: 450px;
   }
 }
+
+.section-item {
+  margin-bottom: 80px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.section-head > .section-title {
+  padding: 0 30px 20px;
+  border: 4px double #000;
+  color: #333333;
+  border-top: 0;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 18px;
+  margin: 0;
+}
+
+.shpck-best-sel .best-sel-cart {
+  margin-bottom: 45px;
+}
+.shpck-best-sel .cart-info {
+  margin-top: 20px;
+  padding: 0 20px;
+  text-align: left;
+}
+.shpck-best-sel .cart-info .info {
+  text-align: start !important;
+}
+
+.new {
+  display: inline-block;
+  background: #f6416c;
+  border: 1px solid #f6416c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 16px;
+  text-transform: uppercase;
+
 .page-banner-area {
   position: relative;
   background-color: #666;
@@ -434,4 +1125,5 @@ a {
 }
 .single-page-banner-area .single-page-banner-area-container .single-page-banner-area-text h1 {
   font-size: 3rem;
+
 }/*# sourceMappingURL=main.css.map */

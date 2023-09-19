@@ -1,0 +1,26 @@
+.btn-shop {
+    display: inline-block;
+    color: $clr-white;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 33px;
+    line-height: 31px;
+    border: 1px solid $clr-red-f6;
+    padding-inline: 13px;
+    background: $clr-red-f6;
+    transition: all 0.5s ease;
+    &:hover {
+        color: $clr-white;
+        background: none;
+    }
+}
+
+.btn-shop-active {
+    color: $clr-gray-33;
+    background: none;
+
+    &:hover {
+        color: $clr-white;
+        background: $clr-red-f6;
+    }
+}

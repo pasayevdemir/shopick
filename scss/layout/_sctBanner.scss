@@ -1,0 +1,114 @@
+.item-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .item-photo,
+    .item-info {
+        display: inline-block;
+    }
+
+    .item-photo {
+        a {
+            position: relative;
+
+            &::after {
+                transform: scaleX(0);
+            }
+
+            &::before {
+                transform: scaleY(0);
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                width: calc(100% - 36px);
+                height: calc(100% - 36px);
+                top: 18px;
+                left: 18px;
+                transform-origin: center;
+                z-index: 1;
+                background: $clr-black;
+                opacity: 0;
+                transition: all 0.5s ease;
+            }
+
+            &:hover {
+
+                &::after,
+                &::before {
+                    transition: all 0.5s ease;
+                    opacity: 0.1;
+                    transform: scaleX(1);
+                    transform: scaleY(1);
+                }
+            }
+        }
+
+        img {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    .item-info {
+        padding: 25px 53px 66px;
+        transform: translateX(-15px);
+        border: 1px solid $clr-br;
+
+        h2 {
+            line-height: 32px;
+            font-size: 32px;
+            font-weight: 300;
+            text-wrap: nowrap;
+            margin: 0;
+            padding-bottom: 10px;
+
+            b {
+                font-weight: 700;
+            }
+        }
+
+        .line-down {
+            font-size: 24px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 4px;
+                width: 75px;
+                background: $clr-red-f6;
+                z-index: 1;
+            }
+        }
+
+        .btn-shop-banner {
+            width: max-content;
+            margin-top: 20px;
+        }
+    }
+
+}
+
+.item-banner-right {
+    flex-direction: row-reverse;
+
+    .item-info {
+        transform: translateX(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        .line-down {
+            &::after {
+                right: 0px;
+                left: auto;
+            }
+        }
+    }
+}
