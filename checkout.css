@@ -1,0 +1,145 @@
+#header-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #666;
+}
+
+.pageFont {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #666;
+}
+
+.pagePanel {
+  background-color: #dedede;
+  border-top: 3px solid #f6416c;
+  color: #555;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 15px;
+  padding: 1em 2em 1em 3.5em;
+  position: relative;
+  width: auto;
+}
+
+.pagePanel::before{
+    color: #4a4a4a;
+    content: "\e634";
+    display: inline-block;
+    font-family: Pe-icon-7-stroke;
+    left: 1.5em;
+    position: absolute;
+    top: 1em;
+}
+
+.pagePanel a {
+  color: #003399;
+  font-weight: 0;
+}
+
+.pagePanel a:hover {
+  color: #f6416c;
+}
+
+.required {
+  color: #f6416c;
+}
+
+.col-lg-6 p input {
+  background: #f0f0f0 none repeat scroll 0 0;
+  border: 1px solid #e5e5e5;
+  height: 40px;
+  margin: 0 0 14px;
+  max-width: 100%;
+  padding: 0 0 0 10px;
+  width: 100%;
+}
+
+#bLogin {
+  background: #252525 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 15px;
+  padding: 0 15px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+
+#bLogin:hover {
+  background: #f6416c none repeat scroll 0 0;
+}
+
+#inpText {
+  font-size: 14px;
+}
+
+#customer-textarea {
+  background: #f0f0f0 none repeat scroll 0 0;
+  border: medium none;
+  height: 110px;
+  width: 100%;
+  padding: 10px 15px;
+  resize: vertical;
+  margin: 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: inherit;
+}
+
+.order-table {
+  background: #f0f0f0 none repeat scroll 0 0;
+}
+
+.order-table {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #666;
+  /* padding: 15px 0px 15px 70px; */
+}
+
+.order-table table {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  display: table;
+  border-color: gray;
+  text-indent: initial;
+}
+
+.order-table table th,
+.order-table table td {
+  border-bottom: 1px solid #d8d8d8;
+  border-right: medium none;
+  font-size: 14px;
+  padding: 15px 0 15px 70px;
+  text-align: left;
+}
+
+.order-table table th{
+    border-top: medium none;
+    font-weight: normal;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 250px;
+}
+
+.product-total-sum{
+    color: #f6416c;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.product-total-name{
+    color: #666;
+    font-weight: 700;
+    font-size: 16px;
+}

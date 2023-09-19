@@ -2,18 +2,18 @@
 // @import "./scss/vendors/fontAwesome";
 // @import "./scss/vendors/bootstrap";
 
-// Abstract 
+// Abstract
 @import "./scss/abstarcts/variables";
 
-// Base 
+// Base
 @import "./scss/base/reset";
 @import "./scss/base/typography";
-// Components 
+// Components
 @import "./scss/components/dropdown";
 @import "./scss/components/slider";
 @import "./scss/components/btnShop";
 
-// Layouts 
+// Layouts
 @import "./scss/layout/header";
 @import "./scss/layout/sctBanner";
 @import "./scss/layout/sctCollection";
@@ -21,8 +21,7 @@
 @import "./scss/layout/sctPromotional";
 @import "./scss/layout/media";
 
-// Pages 
+// Pages
 @import "./scss/pages/home";
-
-// Themes 
-
+@import "./scss/pages/contact";
+@import "./scss/pages/single-product"; // Themes
