@@ -10,9 +10,15 @@
 @import "./scss/base/typography";
 // Components 
 @import "./scss/components/dropdown";
+@import "./scss/components/slider";
+@import "./scss/components/btnShop";
 
 // Layouts 
 @import "./scss/layout/header";
+@import "./scss/layout/sctBanner";
+@import "./scss/layout/sctCollection";
+@import "./scss/layout/sctProduct";
+@import "./scss/layout/sctPromotional";
 @import "./scss/layout/media";
 
 // Pages 

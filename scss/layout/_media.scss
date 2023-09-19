@@ -1,5 +1,50 @@
+@media (min-width: 1400px) {
+    .promotional-content {
+        .promotional-photo-clock {
+            .promotional-info-clock {
+                .promotional-timer {
+                    padding: 75px 0 0 45px;
+
+                    .tmr-list {
+                        .tmr-list-item {
+                            height: 105px;
+                            width: 105px;
+
+                            span {
+                                line-height: 36px;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 1200px) {
-    
+    .shpck-product {
+        .content {
+            >.sliders {
+                --per-view: 4;
+            }
+        }
+    }
+
+    .shpck-promotional {
+        .promotional-photo {
+            img {
+                min-height: 420px;
+                height: 420px;
+                object-position: right top;
+            }
+
+            .promotional-info {
+                padding-left: 16%;
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -8,7 +53,8 @@
         .top-list {
             .list-item {
                 padding: 18px 8px !important;
-                i{
+
+                i {
                     margin-right: 8px;
                 }
             }
@@ -17,6 +63,24 @@
         .top-right {
             .list-item {
                 padding: 12px 8px !important;
+            }
+        }
+    }
+
+    .shpck-product {
+        .content {
+            >.sliders {
+                --per-view: 3;
+            }
+        }
+    }
+
+    .shpck-collection {
+        .collection-item {
+            .collection-info {
+                .new {
+                    display: none;
+                }
             }
         }
     }
@@ -45,35 +109,232 @@
             }
         }
     }
-    .container{
+
+    .container {
         width: 300px;
     }
+
+    .item-banner {
+        .item-info {
+            display: none;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .shpck-product {
+        .content {
+            >.sliders {
+                --per-view: 2;
+            }
+        }
+    }
+
+    .collection-item {
+        .collection-info {
+            right: 50px;
+
+            h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+                text-align: end;
+            }
+
+            ul {
+                display: none;
+            }
+
+            .btn-collect {
+                margin-top: 12px;
+                opacity: 1;
+            }
+        }
+    }
+
+    .promotional-content {
+        .promotional-photo {
+            img {
+                min-height: 300px;
+                height: 300px;
+            }
+
+            .promotional-info {
+                padding-left: 10px;
+
+                h2 {
+                    font-size: 36px;
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    font-size: 14px;
+
+                    span {
+                        font-size: 30px;
+                    }
+                }
+
+                h4 {
+                    font-size: 14px;
+                    margin: 5px 0 0;
+                }
+            }
+        }
+
+        .promotional-photo-clock {
+            .promotional-info-clock {
+                .promotional-timer {
+                    padding: 15px 0 0 10px;
+
+                    .tmr-list {
+                        .tmr-list-item {
+                            height: 60px;
+                            width: 60px;
+
+                            span {
+                                line-height: 8px;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 @media (max-width: 576px) {}
 
-@media (min-width: 576px) {
-
-
-    
+@media (max-width: 480px) {
+    .shpck-product {
+        .content {
+            >.sliders {
+                --per-view: 1;
+            }
+        }
+    }
 }
+
+
 
 
 
 
 //Site custom media
-
-@media (min-width: 1200px) {
-    .container{
-        --bs-gutter-x: 7.5000px;
-        max-width: 1200px;
+@media (min-width: 1170px) and (max-width: 1400px) {
+    .shpck-promotional {
+        .promotional-photo {
+            img {
+                min-height: 420px;
+                height: 420px;
+            }
+        }
     }
 }
 
-@media  (min-width: 480px) and (max-width: 767px){
+@media (min-width: 1200px) {
+    .container {
+        --bs-gutter-x: 7.5000px;
+        max-width: 1200px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .item-banner {
+        .item-info {
+            padding: 20px 53px 35px;
+        }
+    }
+
+    .shpck-promotional {
+        .promotional-photo {
+            .promotional-info {
+                padding-left: 16%;
+
+                h2 {
+                    font-size: 50px;
+                }
+
+                h3 {
+                    font-size: 22px;
+
+                    span {
+                        font-size: 40px;
+                    }
+                }
+
+                h4 {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .promotional-photo-clock {
+            position: relative;
+
+            &::before {
+                display: block;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .item-banner {
+        .item-info {
+            padding: 10px 35px 20px;
+
+            h2 {
+                font-size: 26px;
+                line-height: 26px;
+            }
+        }
+    }
+
+    .shpck-best-sel {
+        .photo {
+            .action {
+                .action-btn {
+                    &:hover {
+                        gap: 2px;
+
+                        span {
+                            padding: 0 8px 0 5px !important;
+                        }
+                    }
+
+                    i {
+                        font-size: 15px;
+                        height: 35px;
+                        line-height: 36px;
+                        width: 36px;
+                    }
+                }
+            }
+        }
+    }
+
+    .shpck-promotional {
+        .row {
+            >.col:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
     .container,
     .container-sm {
         width: 450px;
     }
 }
 
+@media (min-width: 576px) {}

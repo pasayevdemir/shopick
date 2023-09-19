@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-inline: 25px;
+        }
+
+        .product-slider {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .product-outter {
+            position: relative;
+            left: 0;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100% - (3px * 2)) / 3);
+            gap: 3px;
+            /* overflow: hidden; */
+            transition: all 1s;
+        }
+
+        .slider-item {
+            background-color: aqua;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slider-info {
+            margin-top: 20px;
+        }
+
+        .star::before {
+            content: "\f005 \f005 \f005 \f005 \f005";
+        }
+
+        .slider-control {
+            padding-block: 20px;
+        }
+
+        .slider-control .content,
+        .item {
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-control .content i {
+            font-size: 24px;
+        }
+
+        .line i {
+            margin-inline: 10px;
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 58px;
+            height: 0.1px;
+            background: #000 none repeat scroll 0 0;
+        }
+
+        .line i::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            border: 1px solid red;
+            background-color: white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-control">
+        <div class="content">
+            <div class="item" id="prev"><i class="fa-regular fa-square-caret-left"></i></div>
+            <div class="line"><i class="fa"></i></div>
+            <div class="item" id="next"><i class="fa-regular fa-square-caret-right"></i></div>
+        </div>
+    </div>
+    <div class="product-slider bg-primary">
+        <div class="product-outter">
+            <div class="slider-item">
+                <img src="./images/product/prdct-1.1.webp" alt="img1">
+                <div class="slider-info">
+                    <i class="star d-block text-center fa-regular"></i>
+                    <a href="" class="d-block text-center">Randomised Words</a>
+                    <span class="d-block text-center">$450.00</span>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./images/product/prdct-1.2.webp" alt="img1">
+                <div class="slider-info">
+                    <i class="star d-block text-center fa-regular"></i>
+                    <a href="" class="d-block text-center">Randomised Words</a>
+                    <span class="d-block text-center">$450.00</span>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./images/product/prdct-2.1.webp" alt="img1">
+                <div class="slider-info">
+                    <i class="star d-block text-center fa-regular"></i>
+                    <a href="" class="d-block text-center">Randomised Words</a>
+                    <span class="d-block text-center">$450.00</span>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./images/product/prdct-2.2.webp" alt="img1">
+                <div class="slider-info">
+                    <i class="star d-block text-center fa-regular"></i>
+                    <a href="" class="d-block text-center">Randomised Words</a>
+                    <span class="d-block text-center">$450.00</span>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="./images/product/prdct-3.1.webp" alt="img1">
+                <div class="slider-info">
+                    <i class="star d-block text-center fa-regular"></i>
+                    <a href="" class="d-block text-center">Randomised Words</a>
+                    <span class="d-block text-center">$450.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+        const productOutter = document.querySelector('.product-outter');
+        const sliderItem = document.querySelectorAll('.slider-item');
+        const imageLeng = sliderItem.length;
+        const viewCount = 5;
+        let totalScroll = 0;
+        productOutter.style.gridAutoColumns = `calc((${productOutter.offsetWidth}px - (3px * 3)) / 4)`;
+        let autoScroll;
+        for (let i = 0; i < viewCount; i++) {
+            productOutter.insertAdjacentHTML('beforeend', sliderItem[i].outerHTML);
+            console.log(productOutter.style.gridAutoColumns.replace("calc(", ' ').replace("px)", ' '));
+        }
+
+
+        const autoSlider = () => {
+            totalScroll++;
+            if (totalScroll >= imageLeng + 1) {
+                clearInterval(autoScroll);
+                totalScroll = 0;
+                productOutter.style.transition = "all 0s";
+                productOutter.style.left = '0';
+                autoScroll = setInterval(autoSlider, 2000);
+                return;
+            }
+            const itemW = parseFloat(productOutter.style.gridAutoColumns.replace("calc(", ' ').replace("px)", ' '));
+            const widthSlider = itemW + 3;
+            productOutter.style.left = `-${totalScroll * widthSlider}px`;
+            productOutter.style.transition = "all 1s";
+            console.log(totalScroll);
+        }
+
+        autoScroll = setInterval(autoSlider, 3000);
+        
+        
+
+        onresize = () => {
+            productOutter.style.gridAutoColumns = `calc((${productOutter.offsetWidth}px - (3px * 3)) / 4)`;
+            clearInterval(autoScroll);
+            productOutter.style.transition = "all 0s";
+            const itemW = parseFloat(productOutter.style.gridAutoColumns.replace("calc(", ' ').replace("px)", ' '));
+            const widthSlider = itemW + 3;
+            productOutter.style.left = `-${totalScroll * widthSlider}px`;
+            autoScroll = setInterval(autoSlider, 3000);
+        };
+        const prevSlider= ()=>{
+            clearInterval(autoScroll);
+            const itemW = parseFloat(productOutter.style.gridAutoColumns.replace("calc(", ' ').replace("px)", ' '));
+            const widthSlider = itemW + 3;
+            totalScroll--;
+            if (totalScroll <= 0) {
+                clearInterval(autoScroll);
+                totalScroll = parseInt(viewCount + 1);
+                productOutter.style.transition = "0s";
+                productOutter.style.left = `-${totalScroll * widthSlider}px`;
+                setTimeout(prevSlider, 1);
+                return;
+            }
+            productOutter.style.left = `-${totalScroll * widthSlider}px`;
+            productOutter.style.transition = "all 1s";
+        }
+
+        const nextSlider = ()=>{
+            clearInterval(autoScroll);
+            const itemW = parseFloat(productOutter.style.gridAutoColumns.replace("calc(", ' ').replace("px)", ' '));
+            const widthSlider = itemW + 3;
+            totalScroll++;
+            if (totalScroll == imageLeng + 1) {
+                clearInterval(autoScroll);
+                totalScroll = 0;
+                productOutter.style.transition = "all 0s";
+                productOutter.style.left = '0';
+                setTimeout(nextSlider, 1);
+                return;
+            }
+            productOutter.style.left = `-${totalScroll * widthSlider}px`;
+            productOutter.style.transition = "all 1s";
+        }
+        prev.addEventListener('click', () => {
+            prevSlider();
+            autoScroll = setInterval(autoSlider, 2000);
+        });
+
+        next.addEventListener('click', () => {
+            nextSlider();
+            autoScroll = setInterval(autoSlider, 2000);
+        });
+        productOutter.addEventListener("resize", () => { });
+    </script>
+</body>
+
+</html>
