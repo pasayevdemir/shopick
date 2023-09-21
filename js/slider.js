@@ -148,7 +148,7 @@ function sliderMove(walkI) {
         totalScroll += step;
         nextSlider();
     }
-    else if (noDown == true && parseInt(widthMov) / 3 < -walkI) {
+    else if (noDown == true && parseInt(widthMov) / 10 < -walkI) {
         totalScroll -= step;
         prevSlider();
     }
@@ -157,11 +157,6 @@ function sliderMove(walkI) {
     }
     wheelX = currentWalk;
     console.log(wheelX);
-    // if (currentWalk < (perView - slidersOutter.children.length) * widthMov && currentWalk!=0) {
-    //     currentWalk = 0;
-    //     slidersOutter.style.left = `${currentWalk}px`;
-    // }
-    // console.log((perView - slidersOutter.children.length) * widthMov + " " + currentWalk);
 }
 const initPage = (obj) => {
     varaibleDec();
@@ -176,8 +171,6 @@ const initPage = (obj) => {
             next.addEventListener('click', nextClick);
         }
     }
-    // console.log(slidersOutter.children.length);
-
 }
 
 window.onload = () => {

@@ -13,6 +13,11 @@
 @import "./scss/components/slider";
 @import "./scss/components/btnShop";
 
+// Pages
+@import "./scss/pages/home";
+@import "./scss/pages/contact";
+@import "./scss/pages/single-product"; 
+
 // Layouts
 @import "./scss/layout/header";
 @import "./scss/layout/sctBanner";
@@ -21,7 +26,5 @@
 @import "./scss/layout/sctPromotional";
 @import "./scss/layout/media";
 
-// Pages
-@import "./scss/pages/home";
-@import "./scss/pages/contact";
-@import "./scss/pages/single-product"; // Themes
+
+// Themes

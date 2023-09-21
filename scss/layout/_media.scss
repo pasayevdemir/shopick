@@ -204,7 +204,9 @@
             }
         }
     }
-
+    .shpck-blok {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 576px) {}
@@ -324,6 +326,15 @@
         .row {
             >.col:not(:last-child) {
                 margin-bottom: 30px;
+            }
+        }
+    }
+
+    .shpck-blok{
+        margin-bottom: 30px;
+        .single-blok{
+            .blok-info{
+                padding: 20px 0 0;
             }
         }
     }
