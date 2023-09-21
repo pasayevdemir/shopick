@@ -100,8 +100,8 @@ const nextSlider = () => {
 }
 
 const loop = () => {
+    for (let j = 0; j < 2; j++)
     for (let i = 0; i < imageLeng; i++) {
-        for (let j = 0; j < 2; j++)
             slidersOutter.insertAdjacentHTML('beforeend', sliderItem[i].outerHTML);
     }
 }
@@ -156,9 +156,9 @@ function sliderMove(walkI) {
         sliderScroll(sliderWidth());
     }
     wheelX = currentWalk;
-    console.log(wheelX);
+    // console.log(wheelX);
 }
-const initPage = (obj) => {
+export const initPage = (obj) => {
     varaibleDec();
     if (isSliders) {
         parametrDeclar(obj);
@@ -200,7 +200,7 @@ function sliderAddEvent() {
         noDown = true;
         walkI = walkI - currentWalk;
         sliderMove(walkI);
-        console.log("walkI: " + walkI);
+        // console.log("walkI: " + walkI);
     });
     slidersOutter.addEventListener('mousemove', (e) => {
         if (!isDown) return;
