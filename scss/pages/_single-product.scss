@@ -144,6 +144,67 @@
   }
 }
 
+//Blok Start
+.shpck-service {
+  padding: 30px 0 0;
+  .service-cart {
+    position: relative;
+    border: 1px solid $clr-gray-99;
+    padding: 35px 25px 8px;
+    text-align: center;
+
+    .service-icon {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -30px;
+      height: 60px;
+      width: 60px;
+      margin: auto;
+      padding: 2px;
+      text-align: center;
+      border: 1px solid $clr-gray-99;
+      background: $clr-white;
+
+      i {
+        display: block;
+        color: $clr-gray-33;
+        font-size: 30px;
+        line-height: 54px;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .service-info {
+      color: $clr-gray-66;
+      h3 {
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: inherit;
+        line-height: 35px;
+        text-align: center;
+      }
+      p {
+        font-size: 14px;
+        line-height: 21px;
+        margin: 0 0 15px;
+      }
+    }
+
+    &:hover {
+      .service-icon {
+        i {
+          transition: all 0.3s ease;
+          background: $clr-red-f6;
+          color: $clr-white;
+        }
+      }
+    }
+  }
+}
+
 .line {
   border-top: 1px solid #999999;
   font-size: 9px;
