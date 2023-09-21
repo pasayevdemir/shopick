@@ -22,8 +22,20 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="checkout.css" />
     <title>Document</title>
+    <style>
+      .checkout-login{
+        border: 0.5px solid #e5e5e5;
+        padding: 15px;
+        max-height: 0;
+        transition: all 1s;
+  }
+  .accor{
+	max-height: 0;
+	overflow: hidden;
+	transition:all 1s ease;
+  }
+    </style>
   </head>
   <body>
     <!-- Header Start -->
@@ -181,16 +193,48 @@
         <div class="col-12">
           <h3 id="header-text">CHECKOUT</h3>
         </div>
+
+
         <div class="col-12">
           <h4 class="pageFont pagePanel mt-4" id="panel">
-            Returning customer? <a href=""><span>Click here to login</span></a>
+            Returning customer? <a href="javascript:;" onclick="accordionFunc()"><span>Click here to login</span></a>
           </h4>
+        </div>
+          <div class="checkout-login accor">
+            <div class="row d-flex">
+              <label class="pageFont">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</label>
+              <div class="col-lg-6">
+                <p>
+                  <label class="pageFont">Username or email</label>
+                  <span class="pageFont required">*</span><br />
+                  <input type="text" />
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p>
+                  <label class="pageFont">Password</label>
+                  <span class="pageFont required">*</span><br />
+                  <input type="password" />
+                </p>
+              </div>
+            </div>
+            <p>
+              <input type="submit" id="bLogin" value="LOGIN" />
+              <input type="radio" />
+              <label class="pageFont" for="for">Remember me</label>
+            </p>
+            <a href="">
+              <p class="pageFont" style="color: #f6416c">Lost your password?</p></a>
+          </div>
+
           <p class="pageFont">
             If you have shopped with us before, please enter your details in the
             boxes below. If you are a new customer please proceed to the Billing
             & Shipping section.
           </p>
-        </div>
+
+
+
         <div class="row d-flex mt-5">
           <div class="col-lg-6">
             <p>
@@ -213,8 +257,7 @@
           <label class="pageFont" for="for">Remember me</label>
         </p>
         <a href="">
-          <p class="pageFont" style="color: #f6416c">Lost your password?</p></a
-        >
+          <p class="pageFont" style="color: #f6416c">Lost your password?</p></a>
         <h4 class="pageFont pagePanel mt-5">
           Have a coupon? <a href=""><span>Click here to enter your code</span></a>
         </h4>
@@ -333,8 +376,7 @@
                 <label>
                   <input type="checkbox" checked />
                   <span
-                    >Create an account by entering the information below.</span
-                  >
+                    >Create an account by entering the information below.</span>
                 </label>
                 <p>
                   If you are a returning customer please login at the top of the
@@ -571,5 +613,18 @@
       </div>
     </section>
     <!-- Section 1 End -->
+
+    <script>
+      function accordionFunc() {
+    const panel = document.querySelector(".checkout-login");
+    panel.classList.toggle("accor");
+    if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    // console.log(panel.scrollHeight);
+}
+    </script>
   </body>
 </html>

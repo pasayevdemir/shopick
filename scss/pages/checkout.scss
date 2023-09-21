@@ -1,0 +1,132 @@
+#header-text {
+	font-family: $font-family_1;
+	font-weight: 500;
+	font-size: 20px;
+	color: $color_1;
+}
+.pageFont {
+	font-family: $font-family_1;
+	font-weight: 400;
+	font-size: 15px;
+	color: $color_1;
+}
+.pagePanel {
+	background-color: $background-color_1;
+	border-top: 3px solid #f6416c;
+	color: $color_2;
+	font-size: 14px;
+	font-weight: 400;
+	margin: 0 0 15px;
+	padding: 1em 2em 1em 3.5em;
+	position: relative;
+	width: auto;
+	&::before {
+		color: $color_3;
+		content: "\e634";
+		display: inline-block;
+		font-family: $font-family_2;
+		left: 1.5em;
+		position: absolute;
+		top: 1em;
+	}
+	a {
+		color: $color_4;
+		font-weight: 0;
+		&:hover {
+			color: $color_5;
+		}
+	}
+}
+.required {
+	color: $color_5;
+}
+.col-lg-6 {
+	p {
+		input {
+			background: #f0f0f0 none repeat scroll 0 0;
+			border: 1px solid #e5e5e5;
+			height: 40px;
+			margin: 0 0 14px;
+			max-width: 100%;
+			padding: 0 0 0 10px;
+			width: 100%;
+		}
+	}
+}
+#bLogin {
+	background: #252525 none repeat scroll 0 0;
+	border: medium none;
+	color: $color_6;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	height: 40px;
+	line-height: 40px;
+	margin-right: 15px;
+	padding: 0 15px;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+	&:hover {
+		background: #f6416c none repeat scroll 0 0;
+	}
+}
+#inpText {
+	font-size: 14px;
+}
+#customer-textarea {
+	background: #f0f0f0 none repeat scroll 0 0;
+	border: medium none;
+	height: 110px;
+	width: 100%;
+	padding: 10px 15px;
+	resize: vertical;
+	margin: 0;
+	font-family: $font-family_3;
+	font-size: 14px;
+	line-height: inherit;
+}
+.order-table {
+	background: #f0f0f0 none repeat scroll 0 0;
+	font-family: $font-family_1;
+	font-size: 15px;
+	color: $color_1;
+	table {
+		width: 100%;
+		caption-side: bottom;
+		border-collapse: collapse;
+		box-sizing: border-box;
+		display: table;
+		border-color: $border-color_1;
+		text-indent: initial;
+		th {
+			border-bottom: 1px solid #d8d8d8;
+			border-right: medium none;
+			font-size: 14px;
+			padding: 15px 0 15px 70px;
+			text-align: left;
+			border-top: medium none;
+			font-weight: normal;
+			text-transform: uppercase;
+			vertical-align: middle;
+			white-space: nowrap;
+			width: 250px;
+		}
+		td {
+			border-bottom: 1px solid #d8d8d8;
+			border-right: medium none;
+			font-size: 14px;
+			padding: 15px 0 15px 70px;
+			text-align: left;
+		}
+	}
+}
+.product-total-sum {
+	color: $color_5;
+	font-weight: 700;
+	font-size: 16px;
+}
+.product-total-name {
+	color: $color_1;
+	font-weight: 700;
+	font-size: 16px;
+}
