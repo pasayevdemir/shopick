@@ -14,8 +14,6 @@
                                 line-height: 36px;
                             }
                         }
-
-
                     }
                 }
             }
@@ -23,10 +21,17 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .container {
+        --bs-gutter-x: 7.5px;
+        max-width: 1200px;
+    }
+}
+
 @media (max-width: 1200px) {
     .shpck-product {
         .content {
-            >.sliders {
+            > .sliders {
                 --per-view: 4;
             }
         }
@@ -49,7 +54,6 @@
 
 @media (max-width: 992px) {
     .header-top {
-
         .top-list {
             .list-item {
                 padding: 18px 8px !important;
@@ -69,7 +73,7 @@
 
     .shpck-product {
         .content {
-            >.sliders {
+            > .sliders {
                 --per-view: 3;
             }
         }
@@ -84,9 +88,38 @@
             }
         }
     }
+
+    .shpck-service {
+        .col-lg-4:not(:last-child) {
+            margin-bottom: 50px;
+        }
+        .service-info {
+            h3 {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .shpck-all-product {
+        .all-product-inner {
+            .all-product-info {
+                h2 {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    .section-item {
+        margin-bottom: 60px;
+    }
 }
 
 @media (max-width: 768px) {
+    .section-item {
+        margin-bottom: 50px;
+    }
+
     .shpck-header {
         .header-top {
             display: none;
@@ -126,7 +159,7 @@
 
     .shpck-product {
         .content {
-            >.sliders {
+            > .sliders {
                 --per-view: 2;
             }
         }
@@ -197,8 +230,6 @@
                                 line-height: 8px;
                             }
                         }
-
-
                     }
                 }
             }
@@ -207,24 +238,67 @@
     .shpck-blok {
         margin-bottom: 20px;
     }
-}
 
-@media (max-width: 576px) {}
+    .shpck-service {
+        .service-info {
+            h3 {
+                font-size: 16px;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+    }
 
-@media (max-width: 480px) {
-    .shpck-product {
-        .content {
-            >.sliders {
-                --per-view: 1;
+    .shpck-all-product {
+        .all-product-inner {
+            .all-product-info {
+                h2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 13px;
+                }
+            }
+            .all-product-info,
+            .all-product-link {
+                padding: 0 20px;
+            }
+            .btn-all-product {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .shpck-featur {
+        .featur-card-1 {
+            width: 100%;
+        }        
+        .featur-card-2 {
+            width: 100%;
+            margin: 30px 0;
+            > .featur-card:not(:last-child) {
+                padding-bottom: 0;
+                margin-bottom: 30px;
             }
         }
     }
 }
 
+@media (max-width: 576px) {
+}
 
-
-
-
+@media (max-width: 480px) {
+    .shpck-product {
+        .content {
+            > .sliders {
+                --per-view: 1;
+            }
+        }
+    }
+}
 
 //Site custom media
 @media (min-width: 1170px) and (max-width: 1400px) {
@@ -236,14 +310,6 @@
             }
         }
     }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        --bs-gutter-x: 7.5000px;
-        max-width: 1200px;
-    }
-
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -324,16 +390,16 @@
 
     .shpck-promotional {
         .row {
-            >.col:not(:last-child) {
+            > .col:not(:last-child) {
                 margin-bottom: 30px;
             }
         }
     }
 
-    .shpck-blok{
+    .shpck-blok {
         margin-bottom: 30px;
-        .single-blok{
-            .blok-info{
+        .single-blok {
+            .blok-info {
                 padding: 20px 0 0;
             }
         }
@@ -341,11 +407,11 @@
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
-
     .container,
     .container-sm {
         width: 450px;
     }
 }
 
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+}
