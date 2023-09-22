@@ -214,6 +214,8 @@
     }
 }
 //All-Product End
+
+//Featur Start
 .shpck-featur {
     .cus-row > .featur-card {
         padding-inline: 1px;
@@ -268,7 +270,7 @@
     }
 
     &:hover {
-        >.featur-info {
+        > .featur-info {
             opacity: 1;
             right: 1px;
             a {
@@ -291,3 +293,97 @@
         padding-top: 2px;
     }
 }
+//Featur End
+
+//Featur Start
+.subscribe {
+    position: relative;
+    display: flex;
+    padding: 25px 60px 20px 35px;
+    border: 1px solid $clr-gray-cc;
+    overflow-x: hidden;
+
+    .subscribe-info {
+        width: 50%;
+        color: $clr-gray-66;
+
+        p {
+            display: block;
+            font-size: 14px;
+            line-height: 21px;
+            margin: 0 0 15px;
+        }
+        
+        h3 {
+            text-wrap: nowrap;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 35px;
+            text-transform: uppercase;
+        }
+    }
+
+    .subscribe-form {
+        width: 50%;
+        margin-block: auto;
+        padding-left: 35px;
+
+        form {
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            height: 50px;
+            width: 78%;
+            border: 1px solid $clr-gray-cc;
+            outline: none;
+            background: $clr-white;
+            font-size: 14px;
+            padding: 0 25px 0 15px;
+            border-right: 0;
+        }
+
+        button {
+            background: $clr-red-f6;
+            color: $clr-white;
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 0 20px;
+            position: relative;
+            text-transform: uppercase;
+            z-index: 1;
+            border: 0;
+            outline: none;
+            height: 50px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $clr-red-f6;
+                margin-left: -10px;
+                z-index: -1;
+                transform: skewX(-20deg);
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: skewX(-40deg);
+        width: 66%;
+        height: 100%;
+        margin-left: -100px;
+        background: $clr-gray-f4;
+        border-right: 2px solid $clr-gray-d5;
+    }
+}
+//Featur End

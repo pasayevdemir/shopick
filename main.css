@@ -328,6 +328,89 @@ a {
   padding-top: 2px;
 }
 
+.subscribe {
+  position: relative;
+  display: flex;
+  padding: 25px 60px 20px 35px;
+  border: 1px solid #cccccc;
+  overflow-x: hidden;
+}
+.subscribe .subscribe-info {
+  width: 50%;
+  color: #666666;
+}
+.subscribe .subscribe-info p {
+  display: block;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0 0 15px;
+}
+.subscribe .subscribe-info h3 {
+  text-wrap: nowrap;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+.subscribe .subscribe-form {
+  width: 50%;
+  margin-block: auto;
+  padding-left: 35px;
+}
+.subscribe .subscribe-form form {
+  display: flex;
+  align-items: center;
+}
+.subscribe .subscribe-form input {
+  height: 50px;
+  width: 78%;
+  border: 1px solid #cccccc;
+  outline: none;
+  background: #fff;
+  font-size: 14px;
+  padding: 0 25px 0 15px;
+  border-right: 0;
+}
+.subscribe .subscribe-form button {
+  background: #f6416c;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 20px;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+  border: 0;
+  outline: none;
+  height: 50px;
+}
+.subscribe .subscribe-form button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f6416c;
+  margin-left: -10px;
+  z-index: -1;
+  transform: skewX(-20deg);
+}
+.subscribe::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: skewX(-40deg);
+  width: 66%;
+  height: 100%;
+  margin-left: -100px;
+  background: #f4f4f4;
+  border-right: 2px solid #d5d5d5;
+}
+
 .page-banner-area {
   position: relative;
   background-color: #666;
@@ -681,6 +764,7 @@ a {
 }
 .shpck-header .header-main .total-cart {
   float: right;
+  position: relative;
 }
 .shpck-header .header-main .total-cart .total-cart-main {
   display: flex;
@@ -703,7 +787,23 @@ a {
   line-height: 26px;
   color: #f6416c;
 }
-
+.shpck-header .header-main .total-cart .total-cart-downlist {
+  position: absolute;
+  top: 100%;
+  right: 50px;
+  z-index: 5;
+  background: #fff;
+  box-shadow: 2px 6px 8px 6px rgba(0, 0, 0, 0.13);
+  padding: 30px 0 0;
+}
+.shpck-header .header-main .total-cart .total-cart-downlist .cart-photo-details {
+  display: flex;
+}
+.shpck-header .header-main .total-cart .total-cart-downlist .cart-photo-details .cart-photo-brief {
+  display: flex;
+  flex-direction: column;
+  text-wrap: nowrap;
+}
 .item-banner {
   width: 100%;
   display: flex;
@@ -1130,6 +1230,8 @@ a {
   top: 0;
   left: 0;
   z-index: 2;
+  display: flex;
+  width: 100%;
 }
 .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer {
   padding: 35px 0 0 45px;
@@ -1139,11 +1241,12 @@ a {
   height: 80px;
   width: 80px;
   background: #323232;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   color: #fff;
   text-align: center;
 }
-.promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item span, .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item p {
+.promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item span,
+.promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item p {
   display: block;
   font-weight: 700;
   line-height: 20px;
@@ -1155,6 +1258,53 @@ a {
 .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item p {
   margin: 8px 0 0;
   font-size: 14px;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock {
+  float: right;
+  padding: 95px 0 0 65px;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock h2,
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock h3 {
+  color: #333333;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock h2 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock h3 {
+  font-size: 33px;
+  font-weight: 300;
+  margin-bottom: 17px;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock h3 span {
+  font-weight: 700;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock ul > li {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  padding-left: 28px;
+  position: relative;
+  text-transform: uppercase;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock ul > li::before {
+  background: #f6416c;
+  border-radius: 100%;
+  content: "";
+  height: 10px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+}
+.promotional-content .promotional-photo-clock .promotional-info-clock .info-clock .btn-tmr {
+  font-size: 16px;
+  margin-top: 55px;
 }
 
 @media (min-width: 1400px) {
@@ -1187,6 +1337,9 @@ a {
   }
   .shpck-promotional .promotional-photo .promotional-info {
     padding-left: 16%;
+  }
+  .shpck-promotional .promotional-photo-clock .promotional-info-clock .info-clock {
+    padding: 65px 0 0 30px;
   }
 }
 @media (max-width: 992px) {
@@ -1282,6 +1435,9 @@ a {
     font-size: 14px;
     margin: 5px 0 0;
   }
+  .promotional-content .promotional-photo-clock .promotional-info-clock {
+    justify-content: space-between;
+  }
   .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer {
     padding: 15px 0 0 10px;
   }
@@ -1291,6 +1447,33 @@ a {
   }
   .promotional-content .promotional-photo-clock .promotional-info-clock .promotional-timer .tmr-list .tmr-list-item span {
     line-height: 8px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .info-clock {
+    padding-top: 20px;
+    width: 143px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .info-clock h2 {
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    text-wrap: wrap;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .info-clock h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .info-clock ul > li {
+    font-size: 9.5px;
+    line-height: 15px;
+    padding-left: 8px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .info-clock ul > li::before {
+    height: 5px;
+    width: 5px;
+  }
+  .promotional-content .promotional-photo-clock .promotional-info-clock .info-clock .btn-tmr {
+    font-size: 10px;
   }
   .shpck-blok {
     margin-bottom: 20px;
@@ -1326,6 +1509,39 @@ a {
   .shpck-featur .featur-card-2 > .featur-card:not(:last-child) {
     padding-bottom: 0;
     margin-bottom: 30px;
+  }
+  .subscribe {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .subscribe .subscribe-info {
+    width: 100%;
+  }
+  .subscribe .subscribe-info p {
+    font-size: 13px;
+  }
+  .subscribe .subscribe-info h3 {
+    text-wrap: wrap;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+  .subscribe .subscribe-form {
+    width: 100%;
+    padding-left: 0;
+  }
+  .subscribe .subscribe-form form {
+    flex-wrap: wrap;
+  }
+  .subscribe .subscribe-form input {
+    min-width: 100%;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+  }
+  .subscribe .subscribe-form button::before {
+    content: none;
   }
 }
 @media (max-width: 480px) {
@@ -1365,6 +1581,12 @@ a {
     display: block;
     opacity: 0.5;
   }
+  .shpck-promotional .promotional-photo-clock .promotional-info-clock .info-clock {
+    padding: 65px 0 0 30px;
+  }
+  .shpck-service .subscribe-form input {
+    width: 72%;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .item-banner .item-info {
@@ -1394,6 +1616,27 @@ a {
   }
   .shpck-blok .single-blok .blok-info {
     padding: 20px 0 0;
+  }
+  .subscribe {
+    padding: 30px 20px;
+  }
+  .subscribe .subscribe-info {
+    width: 44%;
+  }
+  .subscribe .subscribe-info h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 7px 0 0;
+  }
+  .subscribe .subscribe-info p {
+    display: none;
+  }
+  .subscribe .subscribe-form {
+    width: 56%;
+    padding-left: 20px;
+  }
+  .subscribe .subscribe-form input {
+    width: 65%;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {

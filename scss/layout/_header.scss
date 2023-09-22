@@ -218,6 +218,7 @@
         /*total-cart Start*/
         .total-cart {
             float: right;
+            position: relative;
 
             .total-cart-main {
                 display: flex;
@@ -243,6 +244,39 @@
                     }
                 }
             }
+
+            .total-cart-downlist{
+                    position: absolute;
+                    top: 100%;
+                    right: 50px;
+                    z-index: 5;
+                    background: $clr-white;
+                    box-shadow: 2px 6px 8px 6px rgba(0, 0, 0, 0.13);
+                    padding: 30px 0 0;
+                    .cart-photo-details{
+                        display: flex;
+                        
+                        .cart-photo{
+
+                        }
+
+                        .cart-photo-brief{
+                            display: flex;
+                            flex-direction: column;
+                            text-wrap: nowrap;
+                            a{
+
+                            }
+
+                            span{
+
+                            }
+                        }
+                        .pro-delete{
+
+                        }
+                    }
+                }
         }
 
         /*total-cart End*/
