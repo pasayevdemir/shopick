@@ -9,6 +9,7 @@
         margin-bottom: 30px;
     }
 }
+
 .collection-item {
     position: relative;
 
@@ -93,4 +94,17 @@
             }
         }
     }
+}
+
+.new{
+    display: inline-block;
+    background: $clr-red-f6;
+    border: 1px solid $clr-red-f6;
+    color: $clr-white;
+    font-size: 14px;
+    font-weight: 700;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 16px;
+    text-transform: uppercase;
 }

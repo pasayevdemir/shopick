@@ -100,8 +100,8 @@ const nextSlider = () => {
 }
 
 const loop = () => {
+    for (let j = 0; j < 2; j++)
     for (let i = 0; i < imageLeng; i++) {
-        for (let j = 0; j < 2; j++)
             slidersOutter.insertAdjacentHTML('beforeend', sliderItem[i].outerHTML);
     }
 }
@@ -148,7 +148,7 @@ function sliderMove(walkI) {
         totalScroll += step;
         nextSlider();
     }
-    else if (noDown == true && parseInt(widthMov) / 3 < -walkI) {
+    else if (noDown == true && parseInt(widthMov) / 10 < -walkI) {
         totalScroll -= step;
         prevSlider();
     }
@@ -156,14 +156,9 @@ function sliderMove(walkI) {
         sliderScroll(sliderWidth());
     }
     wheelX = currentWalk;
-    console.log(wheelX);
-    // if (currentWalk < (perView - slidersOutter.children.length) * widthMov && currentWalk!=0) {
-    //     currentWalk = 0;
-    //     slidersOutter.style.left = `${currentWalk}px`;
-    // }
-    // console.log((perView - slidersOutter.children.length) * widthMov + " " + currentWalk);
+    // console.log(wheelX);
 }
-const initPage = (obj) => {
+export const initPage = (obj) => {
     varaibleDec();
     if (isSliders) {
         parametrDeclar(obj);
@@ -176,8 +171,6 @@ const initPage = (obj) => {
             next.addEventListener('click', nextClick);
         }
     }
-    // console.log(slidersOutter.children.length);
-
 }
 
 window.onload = () => {
@@ -207,7 +200,7 @@ function sliderAddEvent() {
         noDown = true;
         walkI = walkI - currentWalk;
         sliderMove(walkI);
-        console.log("walkI: " + walkI);
+        // console.log("walkI: " + walkI);
     });
     slidersOutter.addEventListener('mousemove', (e) => {
         if (!isDown) return;
