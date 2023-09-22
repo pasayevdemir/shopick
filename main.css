@@ -16,6 +16,52 @@ ul {
   padding: 0;
 }
 
+.checkout-login{
+  max-height: 0;
+  transition: all 1s;
+  overflow: hidden;
+  /* border: 1px solid #e5e5e5; */
+}
+.accor{
+  max-height: 0;
+  transition: all 1s ease;
+}
+
+.accor-border{
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+
+.checkout-coupon{
+  max-height: 0;
+  transition: all 1s;
+  overflow: hidden;
+}
+.accor{
+  max-height: 0;
+  transition: all 1s ease;
+}
+
+#inpCoupon{
+  padding-left: 10px;
+  height: 36px;
+  width: 170px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  border: 1px solid #e5e5e5
+}
+
+#inpSubmit{
+  background: #f6416c none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  height: 36px;
+  margin-left: 6px;
+  padding: 5px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
 a {
   text-decoration: none;
   color: inherit;

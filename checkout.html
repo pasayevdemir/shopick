@@ -23,17 +23,6 @@
     />
     <link rel="stylesheet" href="main.css" />
     <title>Document</title>
-    <style>
-.checkout-login{
-  max-height: 0;
-  transition: all 1s;
-  overflow: hidden;
-}
-.accor{
-  max-height: 0;
-  transition: all 1s ease;
-}
-    </style>
   </head>
   <body>
     <!-- Header Start -->
@@ -199,6 +188,7 @@
           </h4>
         </div>
           <div class="checkout-login accor">
+            <div class="accor-border">
             <div class="row d-flex">
               <label class="pageFont">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</label>
               <div class="col-lg-6">
@@ -221,8 +211,8 @@
               <input type="radio" />
               <label class="pageFont" for="for">Remember me</label>
             </p>
-            <a href="">
-              <p class="pageFont" style="color: #f6416c">Lost your password?</p></a>
+            <a href=""><p class="pageFont" style="color: #f6416c">Lost your password?</p></a>
+          </div>
           </div>
 
           <p class="pageFont">
@@ -256,9 +246,23 @@
         </p>
         <a href="">
           <p class="pageFont" style="color: #f6416c">Lost your password?</p></a>
+
         <h4 class="pageFont pagePanel mt-5">
-          Have a coupon? <a href=""><span>Click here to enter your code</span></a>
+          Have a coupon? <a href="javascript:;" onclick="accordionCouponFunc()"><span>Click here to enter your code</span></a>
         </h4>
+
+        <div class="checkout-coupon accor">
+          <div class="row d-flex">             
+             <div>
+                <input type="text" id="inpCoupon" placeholder="Coupon code"/>
+                <input type="submit" id="inpSubmit" value="APPLY COUPON"/>
+              </div>
+          </div>
+        </div>
+
+
+
+
 
         <div class="row d-flex mt-3">
           <!-- Left Panel -->
@@ -329,8 +333,7 @@
                     <input
                       id="inpText"
                       type="text"
-                      placeholder="Street address"
-                    />
+                      placeholder="Street address"/>
                     <input
                       id="inpText"
                       type="text"
@@ -373,8 +376,7 @@
                 <h4>Create Account</h4>
                 <label>
                   <input type="checkbox" checked />
-                  <span
-                    >Create an account by entering the information below.</span>
+                  <span>Create an account by entering the information below.</span>
                 </label>
                 <p>
                   If you are a returning customer please login at the top of the
@@ -620,9 +622,21 @@
         panel.style.maxHeight = null;
       } else {
         panel.style.maxHeight = panel.scrollHeight + "px";
-      } 
-    // console.log(panel.scrollHeight);
-}
+      }
+    }
     </script>
+<!-- Cupon Accordion -->
+
+<script>
+  function accordionCouponFunc() {
+const panel = document.querySelector(".checkout-coupon");
+panel.classList.toggle("accor");
+if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}
+</script>
   </body>
 </html>
