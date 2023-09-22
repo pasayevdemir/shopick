@@ -173,16 +173,39 @@
         .icon {
           font-size: 1rem;
         }
+        .input-sty {
+          border: none !important;
+          border-radius: 0;
+          margin-top: 1rem;
+          color: $clr-white;
+          font-size: 0.8rem;
+        }
+        input,
+        textarea {
+          background-color: #333;
+          outline: none !important;
+          border: 0;
+        }
+        button {
+          background-color: $clr-red-f6;
+        }
       }
     }
-    .footer-copyright {
-      .footer-copyright-container {
-        .copyright-text {
-          .copyright {
-            color: #f5f5f4;
-            .codecarnival {
-              color: #f6416c;
-            }
+  }
+  .footer-copyright {
+    background: #292727 none repeat scroll 0 0;
+    .footer-copyright-container {
+      width: 80%;
+      margin: 0 auto;
+      .copyright-links {
+        ul li a i {
+          display: inline-block;
+          width: 35px;
+          height: 35px;
+          background-color: $clr-white;
+          &:hover {
+            background-color: $clr-red-f8;
+            color: $clr-white;
           }
         }
       }

@@ -1,26 +1,28 @@
 .sliders {
-    overflow: hidden;
-    width: 100%;
-    --per-view: 5;
+  overflow: hidden;
+  width: 100%;
+  --per-view: 5;
 
-    >.sliders-outter {
-        position: relative;
-        left: 0;
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc((100% - (3px * var(--per-view - 1))/ var(--per-view)));
-        gap: 3px;
-        /* overflow: hidden; */
-        transition: all 1s;
-        transform-style: preserve-3d;
+  > .sliders-outter {
+    position: relative;
+    left: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(
+      (100% - (3px * var(--per-view - 1)) / var(--per-view))
+    );
+    gap: 3px;
+    /* overflow: hidden; */
+    transition: all 1s;
+    transform-style: preserve-3d;
 
-        >.slider-item {
-            text-align: center;
-            img {
-                display: block;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
+    > .slider-item {
+      text-align: center;
+      img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+      }
     }
+  }
 }

@@ -356,3 +356,11 @@
 
 @media (min-width: 576px) {
 }
+
+@media (min-width: 778px) {
+  .single-page-banner-area-text {
+    h1 {
+      font-size: calc(1.375rem + 1.5vw);
+    }
+  }
+}
