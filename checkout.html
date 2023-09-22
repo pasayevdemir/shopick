@@ -181,16 +181,21 @@
           <h3 id="header-text">CHECKOUT</h3>
         </div>
 
-
         <div class="col-12">
           <h4 class="pageFont pagePanel mt-4" id="panel">
-            Returning customer? <a href="javascript:;" onclick="accordionFunc()"><span>Click here to login</span></a>
+            Returning customer?
+            <a href="javascript:;" onclick="accordionFunc()"
+              ><span>Click here to login</span></a
+            >
           </h4>
         </div>
-          <div class="checkout-login accor">
-            <div class="accor-border">
+        <div class="checkout-login accor">
+          <div class="accor-border">
             <div class="row d-flex">
-              <label class="pageFont">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</label>
+              <label class="pageFont"
+                >Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed
+                est sit amet ipsum luctus.</label
+              >
               <div class="col-lg-6">
                 <p>
                   <label class="pageFont">Username or email</label>
@@ -211,17 +216,19 @@
               <input type="radio" />
               <label class="pageFont" for="for">Remember me</label>
             </p>
-            <a href=""><p class="pageFont" style="color: #f6416c">Lost your password?</p></a>
+            <a href=""
+              ><p class="pageFont" style="color: #f6416c">
+                Lost your password?
+              </p></a
+            >
           </div>
-          </div>
+        </div>
 
-          <p class="pageFont">
-            If you have shopped with us before, please enter your details in the
-            boxes below. If you are a new customer please proceed to the Billing
-            & Shipping section.
-          </p>
-
-
+        <p class="pageFont">
+          If you have shopped with us before, please enter your details in the
+          boxes below. If you are a new customer please proceed to the Billing &
+          Shipping section.
+        </p>
 
         <div class="row d-flex mt-5">
           <div class="col-lg-6">
@@ -245,24 +252,24 @@
           <label class="pageFont" for="for">Remember me</label>
         </p>
         <a href="">
-          <p class="pageFont" style="color: #f6416c">Lost your password?</p></a>
+          <p class="pageFont" style="color: #f6416c">Lost your password?</p></a
+        >
 
         <h4 class="pageFont pagePanel mt-5">
-          Have a coupon? <a href="javascript:;" onclick="accordionCouponFunc()"><span>Click here to enter your code</span></a>
+          Have a coupon?
+          <a href="javascript:;" onclick="accordionCouponFunc()"
+            ><span>Click here to enter your code</span></a
+          >
         </h4>
 
         <div class="checkout-coupon accor">
-          <div class="row d-flex">             
-             <div>
-                <input type="text" id="inpCoupon" placeholder="Coupon code"/>
-                <input type="submit" id="inpSubmit" value="APPLY COUPON"/>
-              </div>
+          <div class="row d-flex">
+            <div>
+              <input type="text" id="inpCoupon" placeholder="Coupon code" />
+              <input type="submit" id="inpSubmit" value="APPLY COUPON" />
+            </div>
           </div>
         </div>
-
-
-
-
 
         <div class="row d-flex mt-3">
           <!-- Left Panel -->
@@ -333,7 +340,8 @@
                     <input
                       id="inpText"
                       type="text"
-                      placeholder="Street address"/>
+                      placeholder="Street address"
+                    />
                     <input
                       id="inpText"
                       type="text"
@@ -376,7 +384,9 @@
                 <h4>Create Account</h4>
                 <label>
                   <input type="checkbox" checked />
-                  <span>Create an account by entering the information below.</span>
+                  <span
+                    >Create an account by entering the information below.</span
+                  >
                 </label>
                 <p>
                   If you are a returning customer please login at the top of the
@@ -511,61 +521,95 @@
               </div>
             </div>
           </div>
-           <!-- Right Panel -->
+          <!-- Right Panel -->
           <div class="col-lg-6">
-              <h3 style="font-size: 20px">Your Order</h3>
-              <div class="order-table mt-5">
-                <table>
-                  <thead>
-                    <tr>
-                      <th class="order-name">Product</th>
-                      <th class="order-total">Total</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="order-name">Lorem Ipsum comes (1)</td>
-                      <td class="order-total">$499.00</td>
-                    </tr>
-                    <tr>
-                      <td class="order-name">Extremes of Good (3)</td>
-                      <td class="order-total">$559.00</td>
-                    </tr>
-                    <tr>
-                      <td class="order-name">Lorem Ipsum comes (1)</td>
-                      <td class="order-total">$320.00</td>
-                    </tr>
-                    <tr>
-                      <th>Shipping</th>
-                      <td>
-                        <ul>
-                          <li>
-                            <input type="checkbox" />
-                            <label for="">Free Shipping</label>
-                          </li>
-                          <li>
-                            <input type="checkbox" />
-                            <label for="">Flat Rate $120.00</label>
-                          </li>
-                          <li>
-                            <input type="checkbox" />
-                            <label for="">International Delivery</label>
-                          </li>
-                        </ul>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="product-total-name">Order Total</td>
-                      <td class="product-total-sum">$1378.00</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div class="payments">
-
+            <h3 style="font-size: 20px">Your Order</h3>
+            <div class="order-table mt-5">
+              <table>
+                <thead>
+                  <tr>
+                    <th class="order-name">Product</th>
+                    <th class="order-total">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="order-name">Lorem Ipsum comes (1)</td>
+                    <td class="order-total">$499.00</td>
+                  </tr>
+                  <tr>
+                    <td class="order-name">Extremes of Good (3)</td>
+                    <td class="order-total">$559.00</td>
+                  </tr>
+                  <tr>
+                    <td class="order-name">Lorem Ipsum comes (1)</td>
+                    <td class="order-total">$320.00</td>
+                  </tr>
+                  <tr>
+                    <th>Shipping</th>
+                    <td>
+                      <ul>
+                        <li>
+                          <input type="checkbox" />
+                          <label for="">Free Shipping</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" />
+                          <label for="">Flat Rate $120.00</label>
+                        </li>
+                        <li>
+                          <input type="checkbox" />
+                          <label for="">International Delivery</label>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="product-total-name">Order Total</td>
+                    <td class="product-total-sum">$1378.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="payments">
+                <div class="pay-accor">
+                  <h3>Direct Bank Transfer</h3>
+                  <div class="pay-content">
+                    <p>
+                      Make your payment directly into our bank account. Please
+                      use your Order ID as the payment reference. Your order
+                      won’t be shipped until the funds have cleared in our
+                      account.
+                    </p>
+                  </div>
+                </div>
+                <div class="pay-accor">
+                  <h3>Cheque Payment</h3>
+                  <div class="pay-content">
+                    <p>
+                      Make your payment directly into our bank account. Please
+                      use your Order ID as the payment reference. Your order
+                      won’t be shipped until the funds have cleared in our
+                      account.
+                    </p>
+                  </div>
+                </div>
+                <div class="pay-accor">
+                  <h3>Paypal</h3>
+                  <div class="pay-content">
+                    <p>
+                      Make your payment directly into our bank account. Please
+                      use your Order ID as the payment reference. Your order
+                      won’t be shipped until the funds have cleared in our
+                      account.
+                    </p>
+                  </div>
+                </div>
+                <div class="pay-order-button">
+                  <input type="submit"  value="PLACE ORDER">
                 </div>
               </div>
+            </div>
           </div>
-
         </div>
       </div>
       <!-- container -->
@@ -616,27 +660,27 @@
 
     <script>
       function accordionFunc() {
-    const panel = document.querySelector(".checkout-login");
-    panel.classList.toggle("accor");
-    if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+        const panel = document.querySelector(".checkout-login");
+        panel.classList.toggle("accor");
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
       }
-    }
     </script>
-<!-- Cupon Accordion -->
+    <!-- Cupon Accordion -->
 
-<script>
-  function accordionCouponFunc() {
-const panel = document.querySelector(".checkout-coupon");
-panel.classList.toggle("accor");
-if (panel.style.maxHeight) {
-    panel.style.maxHeight = null;
-  } else {
-    panel.style.maxHeight = panel.scrollHeight + "px";
-  }
-}
-</script>
+    <script>
+      function accordionCouponFunc() {
+        const panel = document.querySelector(".checkout-coupon");
+        panel.classList.toggle("accor");
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    </script>
   </body>
 </html>
