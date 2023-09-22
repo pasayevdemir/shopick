@@ -175,7 +175,7 @@
                         color: $clr-white;
                     }
 
-                    >&:not(:first-child) {
+                    &:not(:first-child) {
                         margin-left: 1px;
                         ::before {
                             content: "";
