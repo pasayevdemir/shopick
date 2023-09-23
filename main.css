@@ -1628,6 +1628,9 @@ a {
   opacity: 1;
   transform: scaleY(1) !important;
 }
+.shpck-header .header-main .shpck-nav .nav-downbar {
+  z-index: 1999;
+}
 .shpck-header .header-main .shpck-nav .nav-downbar .mega-menu {
   background: #fff none repeat scroll 0 0;
   border-top: 2px solid #f6416c;
@@ -1697,7 +1700,6 @@ a {
   box-shadow: 2px 6px 8px 6px rgba(0, 0, 0, 0.13);
   padding: 30px;
   width: 200px;
-  transform: scaleY(0);
   transform-origin: 0 0 0;
 }
 .shpck-header .header-main .shpck-nav .submenu .submenu-title a {
@@ -2476,9 +2478,6 @@ a {
   margin-top: 55px;
 }
 
-.shpck-slider {
-  margin-top: 51px;
-}
 .shpck-slider .cus-slider {
   display: flex;
   overflow: hidden;
@@ -2488,6 +2487,9 @@ a {
 }
 .shpck-slider .cus-slider .slider-itm img {
   width: 100%;
+}
+.shpck-slider .control > .fa-angle-right {
+  content: "\f053" !important;
 }
 
 @media (min-width: 1400px) {
@@ -2843,6 +2845,9 @@ a {
   }
   .single-page-banner-area-text {
     padding: 40px 0 25px;
+  }
+  .shpck-slider {
+    margin-top: 51px;
   }
 }
 @media (min-width: 480px) and (max-width: 767px) {

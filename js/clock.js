@@ -1,5 +1,5 @@
 export function Clock() {
-  let timeEnd = new Date("Sep 23 2023 23:59:59");
+  let timeEnd = new Date("Sep 23 2023 18:00:00");
   let time = Math.abs((timeEnd - new Date()) / 1000);
   let day = Math.floor(time / 3600 / 24);
   let hour = Math.floor(time / 3600) % 24;

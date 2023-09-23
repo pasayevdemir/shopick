@@ -1,5 +1,4 @@
 .shpck-slider{
-    margin-top: 51px;
     .cus-slider{
         display: flex;
         overflow: hidden;
@@ -10,5 +9,11 @@
                 width: 100%;
             }
         }
+    }
+
+    .control{
+            >.fa-angle-right{
+                content: "\f053" !important;
+            }
     }
 }
