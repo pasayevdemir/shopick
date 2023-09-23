@@ -313,7 +313,7 @@
             line-height: 21px;
             margin: 0 0 15px;
         }
-        
+
         h3 {
             text-wrap: nowrap;
             font-size: 28px;
@@ -387,3 +387,50 @@
     }
 }
 //Featur End
+
+.scroll-up {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    background: $clr-gray-44;
+    visibility: visible;
+
+    i {
+        transition: all 0.3s ease 0s;
+        padding-top: 3px;
+        color: $clr-white;
+        height: 45px;
+        line-height: 45px;
+        text-align: center;
+        width: 45px;
+        &::before {
+            font-size: 16px !important;
+        }
+        &:hover {
+            animation: srollUpAni 1s infinite; 
+            animation-delay: 300ms;
+        }
+
+        @keyframes srollUpAni {
+            from {
+                transform: translateY(15px);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-22px);
+                opacity: 0;
+            }
+        }
+    }
+
+    &:hover{
+        background: $clr-red-f6;
+        cursor: pointer;
+    }
+
+}
+
+

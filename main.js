@@ -7,3 +7,9 @@ slider.initPage({
 
 import * as clock from './js/clock.js';
 clock.Clock();
+
+import * as s from './js/srollUp.js';
+s.scrollUp();
+
+import * as m from './js/moblBar.js';
+m.mobilBar();

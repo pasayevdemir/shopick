@@ -1,0 +1,14 @@
+.shpck-slider{
+    margin-top: 51px;
+    .cus-slider{
+        display: flex;
+        overflow: hidden;
+        .slider-itm{
+            min-width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
