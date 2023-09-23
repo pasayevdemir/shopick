@@ -90,10 +90,45 @@
     }
     .page-map-area-map-info {
       .map-area-container {
-        .map-contact-info-container {
-          color: #716c6c;
-          .contact-bold-line {
-            border: 1px solid #e8e8e9;
+        .map-contact-info {
+          .map-contact-info-container {
+            color: #716c6c;
+
+            ul {
+              list-style: outside none none;
+              margin: 0;
+              padding: 0;
+              li {
+                border-bottom: 1px solid #e8e8e9;
+                float: left;
+                font-size: 12px;
+                line-height: 40px;
+                list-style: outside none none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+              }
+            }
+          }
+          textarea {
+            border: 1px solid #ccc;
+            border-radius: 0;
+            height: 180px;
+            padding: 20px;
+            width: 100%;
+          }
+          button {
+            background: #252525 none repeat scroll 0 0;
+            border: medium none;
+            border-radius: 0;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            height: 40px;
+            margin-top: 16px;
+            padding: 0 15px;
+            text-transform: uppercase;
+            transition: all 0.3s ease 0s;
           }
         }
       }
@@ -123,20 +158,14 @@
     }
     .they-are-with-us-logos-area {
       .logo-images-container {
+        position: relative;
         .single-logo {
-          padding: 4rem 3rem;
-        }
-        .bb {
-          border-bottom: 2px solid #fff;
-        }
-        .bl {
-          border-left: 2px solid #fff;
-        }
-        .bt {
-          border-top: 2px solid #fff;
-        }
-        .br {
           border-right: 2px solid #fff;
+          float: left;
+          height: 150px;
+          line-height: 150px;
+          text-align: center;
+          width: 33.33%;
         }
       }
     }
@@ -211,4 +240,22 @@
       }
     }
   }
+}
+
+.cus-h3 {
+  border-bottom: 2px solid #e8e8e9 !important;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+.contact-input {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  height: 50px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  width: 100%;
 }
