@@ -167,12 +167,12 @@
     <!-- Section 1 Start -->
     <section class="page-content">
       <div class="single-page-banner-area">
-        <div
-          class="single-page-banner-area-container d-flex justify-content-start align-items-center"
-        >
-          <div class="single-page-banner-area-text col-lg-12 text-light">
-            <h1 class="fw-bolder">CHECKOUT</h1>
-            <a href="#">Home</a><span>/Checkout</span>
+        <div class="container d-flex justify-content-start align-items-center">
+          <div class="row">
+            <div class="single-page-banner-area-text col-lg-12 text-light">
+              <h1 class="fw-bolder">CHECKOUT</h1>
+              <a href="#">Home</a><span>/Checkout</span>
+            </div>
           </div>
         </div>
       </div>
@@ -200,14 +200,14 @@
                 <p>
                   <label class="pageFont">Username or email</label>
                   <span class="pageFont required">*</span><br />
-                  <input type="text" />
+                  <input type="text" id="inpText" />
                 </p>
               </div>
               <div class="col-lg-6">
                 <p>
                   <label class="pageFont">Password</label>
                   <span class="pageFont required">*</span><br />
-                  <input type="password" />
+                  <input type="password" id="inpText" />
                 </p>
               </div>
             </div>
@@ -235,14 +235,14 @@
             <p>
               <label class="pageFont">Username or email</label>
               <span class="pageFont required">*</span><br />
-              <input type="text" />
+              <input type="text" id="inpText" />
             </p>
           </div>
           <div class="col-lg-6">
             <p>
               <label class="pageFont">Password</label>
               <span class="pageFont required">*</span><br />
-              <input type="password" />
+              <input type="password" id="inpText" />
             </p>
           </div>
         </div>
@@ -570,7 +570,52 @@
                   </tr>
                 </tbody>
               </table>
-              <div class="payments"></div>
+              <div class="payments">
+                <div class="pay-accor">
+                  <h3 class="d-flex gap-2 accordion-opener">
+                    <input type="radio" name="paymentMethod" />Direct Bank
+                    Transfer
+                  </h3>
+                  <div class="pay-content checkout-login">
+                    <p>
+                      Make your payment directly into our bank account. Please
+                      use your Order ID as the payment reference. Your order
+                      won’t be shipped until the funds have cleared in our
+                      account.
+                    </p>
+                  </div>
+                </div>
+                <div class="pay-accor">
+                  <h3 class="d-flex gap-2 accordion-opener">
+                    <input type="radio" name="paymentMethod" />Cheque Payment
+                  </h3>
+                  <div class="pay-content checkout-login">
+                    <p>
+                      Please send your cheque to Store Name, Store Street, Store
+                      Town, Store State / County, Store Postcode.
+                    </p>
+                  </div>
+                </div>
+                <div class="pay-accor">
+                  <h3 class="d-flex gap-2 accordion-opener">
+                    <input type="radio" name="paymentMethod" />Paypal
+                  </h3>
+                  <div class="pay-content checkout-login">
+                    <p>
+                      Pay via PayPal; you can pay with your credit card if you
+                      don’t have a PayPal account.
+                    </p>
+                    <a href=""
+                      ><img
+                        src="https://htmldemo.net/shopick-v1/shopick/img/bg/payment.png"
+                        alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="pay-order-button">
+                  <input type="submit" value="PLACE ORDER" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -621,7 +666,6 @@
     </section>
     <!-- Section 1 End -->
 
-    <!-- Footer Start -->
     <footer>
       <div class="footer-container">
         <div class="footer-content d-flex flex-column flex-wrap">
@@ -755,8 +799,10 @@
         </div>
       </div>
     </footer>
-    <!-- Footer End -->
 
+    <script src="accor.js"></script>
+
+    <!-- Login Accordion -->
     <script>
       function accordionFunc() {
         const panel = document.querySelector(".checkout-login");

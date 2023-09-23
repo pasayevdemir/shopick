@@ -9,8 +9,8 @@
   background-position: left center;
   background-size: cover;
   margin-bottom: 60px;
-  .single-page-banner-area-container {
-    height: 340px;
+  .container {
+    height: 340px !important;
     width: 90%;
     margin: 0 auto;
     .single-page-banner-area-text {

@@ -130,3 +130,88 @@
 	font-weight: 700;
 	font-size: 16px;
 }
+
+.checkout-login{
+	max-height: 0;
+	transition: all 1s;
+	overflow: hidden;
+	transition: all 0.4s;
+}
+
+.checkout-coupon {
+	max-height: 0;
+	transition: all 1s;
+	overflow: hidden;
+  }
+  
+  .accor {
+	max-height: 0;
+	transition: all 1s ease;
+  }
+
+.accor-opened{
+	max-height: 300px;
+}
+
+.accor-border {
+	padding: 20px;
+	border: 1px solid #e5e5e5;
+  }
+
+  .pay-accor h3 {
+	cursor: pointer;
+	font-family: lato;
+	font-size: 13px;
+	font-weight: bold;
+	margin: 0 0 20px 20px;
+	text-transform: none;
+	position: relative;
+  }
+
+  #inpCoupon {
+	padding-left: 10px;
+	height: 36px;
+	width: 170px;
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	border: 1px solid #e5e5e5;
+  }
+
+  #inpSubmit {
+	background: #f6416c none repeat scroll 0 0;
+	border: medium none;
+	color: #fff;
+	height: 36px;
+	margin-left: 6px;
+	padding: 5px 10px;
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+  }
+
+  
+  .pay-order-button input {
+	background: #252525 none repeat scroll 0 0;
+	border: medium none;
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	height: 40px;
+	margin: 20px 0 0;
+	padding: 0 50px;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+  }
+  
+  .pay-order-button input:hover {
+	background: #f6416c none repeat scroll 0 0;
+  }
+
+  .payments {
+	border: 1px solid #e5e5e5;
+	padding: 30px;
+  }
+
+  .pay-content {
+	margin-left: 20px;
+  }
