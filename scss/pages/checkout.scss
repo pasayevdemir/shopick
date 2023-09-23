@@ -130,3 +130,15 @@
 	font-weight: 700;
 	font-size: 16px;
 }
+
+.checkout-login{
+	max-height: 0;
+    transition: all 1s;
+    overflow: hidden;
+	margin-left: 20px;
+	transition: all 0.4s;
+}
+
+.accor-opened{
+	max-height: 300px;
+}

@@ -185,8 +185,7 @@
           <h4 class="pageFont pagePanel mt-4" id="panel">
             Returning customer?
             <a href="javascript:;" onclick="accordionFunc()"
-              ><span>Click here to login</span></a
-            >
+              ><span>Click here to login</span></a>
           </h4>
         </div>
         <div class="checkout-login accor">
@@ -200,14 +199,14 @@
                 <p>
                   <label class="pageFont">Username or email</label>
                   <span class="pageFont required">*</span><br />
-                  <input type="text" />
+                  <input type="text" id="inpText" />
                 </p>
               </div>
               <div class="col-lg-6">
                 <p>
                   <label class="pageFont">Password</label>
                   <span class="pageFont required">*</span><br />
-                  <input type="password" />
+                  <input type="password" id="inpText"/>
                 </p>
               </div>
             </div>
@@ -235,14 +234,14 @@
             <p>
               <label class="pageFont">Username or email</label>
               <span class="pageFont required">*</span><br />
-              <input type="text" />
+              <input type="text" id="inpText"/>
             </p>
           </div>
           <div class="col-lg-6">
             <p>
               <label class="pageFont">Password</label>
               <span class="pageFont required">*</span><br />
-              <input type="password" />
+              <input type="password" id="inpText" />
             </p>
           </div>
         </div>
@@ -572,9 +571,10 @@
               </table>
               <div class="payments">
                 <div class="pay-accor">
-                  
-                  <h3 class="d-flex gap-2"><input type="radio" name="paymentMethod"/>Direct Bank Transfer</h3>
-                  <div class="pay-content">
+                  <h3 class="d-flex gap-2 accordion-opener">
+                    <input type="radio" name="paymentMethod" />Direct Bank Transfer
+                  </h3>
+                  <div class="pay-content checkout-login">
                     <p>
                       Make your payment directly into our bank account. Please
                       use your Order ID as the payment reference. Your order
@@ -584,29 +584,28 @@
                   </div>
                 </div>
                 <div class="pay-accor">
-                  <h3 class="d-flex gap-2"><input type="radio" name="paymentMethod" />Cheque Payment</h3>
-                  <div class="pay-content">
-                    <p>                    
-                      Make your payment directly into our bank account. Please
-                        use your Order ID as the payment reference. Your order
-                        won’t be shipped until the funds have cleared in our
-                        account.
+                  <h3 class="d-flex gap-2 accordion-opener">
+                    <input type="radio" name="paymentMethod" />Cheque Payment
+                  </h3>
+                  <div class="pay-content checkout-login">
+                    <p>
+                      Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
                     </p>
                   </div>
                 </div>
                 <div class="pay-accor">
-                  <h3 class="d-flex gap-2"><input type="radio" name="paymentMethod" />Paypal</h3>
-                  <div class="pay-content">
+                  <h3 class="d-flex gap-2 accordion-opener">
+                    <input type="radio" name="paymentMethod" />Paypal
+                  </h3>
+                  <div class="pay-content checkout-login">
                     <p>
-                      Make your payment directly into our bank account. Please
-                      use your Order ID as the payment reference. Your order
-                      won’t be shipped until the funds have cleared in our
-                      account.
+                      Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.
                     </p>
+                    <a href=""><img src="https://htmldemo.net/shopick-v1/shopick/img/bg/payment.png" alt=""></a>
                   </div>
                 </div>
                 <div class="pay-order-button">
-                  <input type="submit"  value="PLACE ORDER">
+                  <input type="submit" value="PLACE ORDER" />
                 </div>
               </div>
             </div>
@@ -659,6 +658,9 @@
     </section>
     <!-- Section 1 End -->
 
+    <script src="accor.js"></script>
+
+    <!-- Login Accordion -->
     <script>
       function accordionFunc() {
         const panel = document.querySelector(".checkout-login");
